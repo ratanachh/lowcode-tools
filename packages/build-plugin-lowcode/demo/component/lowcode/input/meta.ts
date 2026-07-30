@@ -1,5 +1,5 @@
 
-import { ComponentMetadata, Snippet } from '@alilc/lowcode-types';
+import { ComponentMetadata, Snippet } from '@rchh/lowcode-types';
 
 const InputMeta: ComponentMetadata = {
   "componentName": "Input",
@@ -8,7 +8,7 @@ const InputMeta: ComponentMetadata = {
   "screenshot": "",
   "devMode": "proCode",
   "npm": {
-    "package": "@alilc/example-components",
+    "package": "@rchh/example-components",
     "version": "1.0.0",
     "exportName": "Input",
     "main": "src/index.tsx",

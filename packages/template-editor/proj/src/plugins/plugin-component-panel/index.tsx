@@ -1,5 +1,5 @@
-import { IPublicModelPluginContext } from '@alilc/lowcode-types';
-import ComponentsPane from '@alilc/lowcode-plugin-components-pane';
+import { IPublicModelPluginContext } from '@rchh/lowcode-types';
+import ComponentsPane from '@rchh/lowcode-plugin-components-pane';
 const ComponentPanelPlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {

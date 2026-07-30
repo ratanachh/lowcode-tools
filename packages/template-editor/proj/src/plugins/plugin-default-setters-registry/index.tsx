@@ -1,5 +1,5 @@
-import { IPublicModelPluginContext } from '@alilc/lowcode-types';
-import AliLowCodeEngineExt from '@alilc/lowcode-engine-ext';
+import { IPublicModelPluginContext } from '@rchh/lowcode-types';
+import AliLowCodeEngineExt from '@rchh/lowcode-engine-ext';
 
 // 设置内置 setter 和事件绑定、插件绑定面板
 const DefaultSettersRegistryPlugin = (ctx: IPublicModelPluginContext) => {

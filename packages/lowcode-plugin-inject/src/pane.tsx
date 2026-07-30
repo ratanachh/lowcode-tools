@@ -1,5 +1,5 @@
 import { Checkbox, Table, Button } from "@alifd/next";
-import { IPublicModelPluginContext } from "@alilc/lowcode-types";
+import { IPublicModelPluginContext } from "@rchh/lowcode-types";
 import * as React from 'react';
 import { InjectConfig } from "./controller";
 

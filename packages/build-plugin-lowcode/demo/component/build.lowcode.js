@@ -10,7 +10,7 @@ module.exports = {
       {
         engineScope: '@alilc',
         extraAssets: [
-          'https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.3/dist/assets.json'
+          'https://alifd.alicdn.com/npm/@rchh/lowcode-materials@1.0.3/dist/assets.json'
         ],
         setterMap: {
           TestSetter: '@alilc/magic-editor-setter@1.0.0'

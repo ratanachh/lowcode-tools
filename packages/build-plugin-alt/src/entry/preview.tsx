@@ -1,8 +1,8 @@
 import * as ReactDOM from 'react-dom';
 import React, { useState } from 'react';
 import Loading from '@alifd/next/lib/loading';
-import { buildComponents, assetBundle, AssetList, AssetLevel, AssetLoader } from '@alilc/lowcode-utils';
-import ReactRenderer from '@alilc/lowcode-react-renderer';
+import { buildComponents, assetBundle, AssetList, AssetLevel, AssetLoader } from '@rchh/lowcode-utils';
+import ReactRenderer from '@rchh/lowcode-react-renderer';
 import { SAVE_KEY } from './universal/utils';
 
 const SamplePreview = () => {

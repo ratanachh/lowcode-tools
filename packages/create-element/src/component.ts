@@ -49,7 +49,7 @@ export default async (answers) => {
       ...answers,
       engineScope: '@alilc',
     },
-    templatePkg: `@alilc/${result.packageType}-component-template`,
+    templatePkg: `@rchh/${result.packageType}-component-template`,
     prefix: 'lowcode-setter',
   }).init();
 }

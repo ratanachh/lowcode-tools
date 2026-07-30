@@ -4,7 +4,7 @@ const axios = require('axios');
 const fse = require('fs-extra');
 const chokidar = require('chokidar');
 const mergeWith = require('lodash/mergeWith');
-const parser = require('@alilc/lowcode-material-parser');
+const parser = require('@rchh/lowcode-material-parser');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { getWebpackConfig } = require('build-scripts-config');
 const babelCompile = require('./compile/babel');
@@ -599,7 +599,7 @@ async function initLowCodeSchema(
           `${lowcodeDir}/${componentNameFolder}/meta${metaDevSubfix}.${metaFormat || 'ts'}`,
         ),
         `
-import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
+import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@rchh/lowcode-types';
 
 const ${item.componentName}Meta: IPublicTypeComponentMetadata = ${JSON.stringify(
           componentDescription,

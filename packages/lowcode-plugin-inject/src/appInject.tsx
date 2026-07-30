@@ -1,4 +1,4 @@
-import { IPublicModelPluginContext, IPublicEnumPluginRegisterLevel } from '@alilc/lowcode-types';
+import { IPublicModelPluginContext, IPublicEnumPluginRegisterLevel } from '@rchh/lowcode-types';
 import { getInjectedResource, injectAssets, type InjectOptions } from './utils';
 import Icon from './icon';
 import { Pane } from './pane';

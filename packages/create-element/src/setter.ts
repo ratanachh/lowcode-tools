@@ -6,7 +6,7 @@ export default async (answers) => {
   new InitFunc({
     argv: yargs(hideBin(process.argv)).argv,
     answers,
-    templatePkg: '@alilc/lowcode-template-setter',
+    templatePkg: '@rchh/lowcode-template-setter',
     prefix: 'lowcode-setter',
   }).init();
 }

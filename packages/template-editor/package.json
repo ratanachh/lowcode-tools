@@ -1,5 +1,5 @@
 {
-  "name": "@alilc/lowcode-template-editor",
+  "name": "@rchh/lowcode-template-editor",
   "version": "1.0.5",
   "description": "LowCodeEngine editor template",
   "main": "index.js",

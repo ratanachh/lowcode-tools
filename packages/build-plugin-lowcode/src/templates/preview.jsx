@@ -17,10 +17,10 @@ const Loading = () => <div style={loadingStyle} className="lowcode-plugin-sample
 import ReactDOM from 'react-dom';
 import React, { useState } from 'react';
 import { Loading } from '@alifd/next';
-import Renderer from '@alilc/lowcode-react-renderer';
+import Renderer from '@rchh/lowcode-react-renderer';
 {{/if}}
 
-import { buildComponents, assetBundle, AssetLevel, AssetLoader } from '@alilc/lowcode-utils';
+import { buildComponents, assetBundle, AssetLevel, AssetLoader } from '@rchh/lowcode-utils';
 
 const queryObject = new URLSearchParams(window.location.search);
 const platform = queryObject.get('platform') || 'default';

@@ -1,5 +1,5 @@
 import init, { editor, project, material, setters } from '../src/index';
-import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
+import { createFetchHandler } from '@rchh/lowcode-datasource-fetch-handler'
 import { getPageSchema } from '../src/utils';
 
 const LCE_CONTAINER = document.getElementById('lce-container');
@@ -13,8 +13,8 @@ const config =  {
   // simulatorUrl 在当 engine-core.js 同一个父路径下时是不需要配置的！！！
   // 这里因为用的是 alifd cdn，在不同 npm 包，engine-core.js 和 react-simulator-renderer.js 是不同路径
   simulatorUrl: [
-    'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@latest/dist/css/react-simulator-renderer.css',
-    'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@latest/dist/js/react-simulator-renderer.js'
+    'https://alifd.alicdn.com/npm/@rchh/lowcode-react-simulator-renderer@latest/dist/css/react-simulator-renderer.css',
+    'https://alifd.alicdn.com/npm/@rchh/lowcode-react-simulator-renderer@latest/dist/js/react-simulator-renderer.js'
   ],
   requestHandlersMap: {
     fetch: createFetchHandler()
@@ -35,7 +35,7 @@ const config =  {
         // 修改面包屑组件的分隔符属性setter
         const assets = await (
           await fetch(
-            `https://alifd.alicdn.com/npm/@alilc/lowcode-materials/build/lowcode/assets-prod.json`
+            `https://alifd.alicdn.com/npm/@rchh/lowcode-materials/build/lowcode/assets-prod.json`
           )
         ).json();
         // 设置物料描述

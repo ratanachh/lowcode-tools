@@ -2,7 +2,7 @@ module.exports = {
   plugins: [
     'build-plugin-fusion',
     [
-      '@alilc/build-plugin-alt',
+      '@rchh/build-plugin-alt',
       {
         type: 'plugin',
         // 开启注入调试模式，see：https://lowcode-engine.cn/site/docs/guide/expand/editor/cli

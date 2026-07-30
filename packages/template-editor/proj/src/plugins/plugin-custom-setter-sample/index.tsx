@@ -1,4 +1,4 @@
-import { IPublicModelPluginContext } from '@alilc/lowcode-types';
+import { IPublicModelPluginContext } from '@rchh/lowcode-types';
 import TitleSetter from '@alilc/lowcode-setter-title';
 import BehaviorSetter from './setters/behavior-setter';
 import CustomSetter from './setters/custom-setter';

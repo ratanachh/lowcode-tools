@@ -1,22 +1,22 @@
-import { init, plugins } from '@alilc/lowcode-engine';
-import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
+import { init, plugins } from '@rchh/lowcode-engine';
+import { createFetchHandler } from '@rchh/lowcode-datasource-fetch-handler'
 import EditorInitPlugin from './plugins/plugin-editor-init';
-import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
-import ZhEnPlugin from '@alilc/lowcode-plugin-zh-en';
+import UndoRedoPlugin from '@rchh/lowcode-plugin-undo-redo';
+import ZhEnPlugin from '@rchh/lowcode-plugin-zh-en';
 import CodeGenPlugin from '@alilc/lowcode-plugin-code-generator';
-import DataSourcePanePlugin from '@alilc/lowcode-plugin-datasource-pane';
-import SchemaPlugin from '@alilc/lowcode-plugin-schema';
-import CodeEditorPlugin from "@alilc/lowcode-plugin-code-editor";
-import ManualPlugin from "@alilc/lowcode-plugin-manual";
-import InjectPlugin from '@alilc/lowcode-plugin-inject';
-import SimulatorResizerPlugin from '@alilc/lowcode-plugin-simulator-select';
+import DataSourcePanePlugin from '@rchh/lowcode-plugin-datasource-pane';
+import SchemaPlugin from '@rchh/lowcode-plugin-schema';
+import CodeEditorPlugin from "@rchh/lowcode-plugin-code-editor";
+import ManualPlugin from "@rchh/lowcode-plugin-manual";
+import InjectPlugin from '@rchh/lowcode-plugin-inject';
+import SimulatorResizerPlugin from '@rchh/lowcode-plugin-simulator-select';
 import ComponentPanelPlugin from './plugins/plugin-component-panel';
 import DefaultSettersRegistryPlugin from './plugins/plugin-default-setters-registry';
 import LoadIncrementalAssetsWidgetPlugin from './plugins/plugin-load-incremental-assets-widget';
 import SaveSamplePlugin from './plugins/plugin-save-sample';
 import PreviewSamplePlugin from './plugins/plugin-preview-sample';
 import CustomSetterSamplePlugin from './plugins/plugin-custom-setter-sample';
-import SetRefPropPlugin from '@alilc/lowcode-plugin-set-ref-prop';
+import SetRefPropPlugin from '@rchh/lowcode-plugin-set-ref-prop';
 import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import SimulatorLocalePlugin from './plugins/plugin-simulator-locale';
 import lowcodePlugin from './plugins/plugin-lowcode-component';

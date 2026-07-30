@@ -1,5 +1,5 @@
 {
-  "name": "@alilc/example-components",
+  "name": "@rchh/example-components",
   "version": "1.0.0",
   "description": "A component library based on Fusion Next",
   "files": [
@@ -53,6 +53,7 @@
     }
   },
   "componentConfig": {
-    "materialSchema": "https://unpkg.com/@alilc/example-components@1.0.0/build/lowcode/assets-prod.json"
-  }
+    "materialSchema": "https://unpkg.com/@rchh/example-components@1.0.0/build/lowcode/assets-prod.json"
+  },
+  "private": true
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@alilc/rax-single-component-template",
+  "name": "@rchh/rax-single-component-template",
   "version": "0.1.1",
   "description": "rax 单组件模板",
   "files": [
@@ -12,14 +12,16 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "f2elint commit-file-scan",
       "commit-msg": "f2elint commit-msg-scan"
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

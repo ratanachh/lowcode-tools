@@ -3,19 +3,19 @@ import {
   ILowCodePluginContext,
   plugins,
   project,
-} from '@alilc/lowcode-engine';
-import AliLowCodeEngineExt from '@alilc/lowcode-engine-ext';
+} from '@rchh/lowcode-engine';
+import AliLowCodeEngineExt from '@rchh/lowcode-engine-ext';
 import { Button, Icon } from '@alifd/next';
-import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
-import ComponentsPane from '@alilc/lowcode-plugin-components-pane';
-import ZhEnPlugin from '@alilc/lowcode-plugin-zh-en';
+import UndoRedoPlugin from '@rchh/lowcode-plugin-undo-redo';
+import ComponentsPane from '@rchh/lowcode-plugin-components-pane';
+import ZhEnPlugin from '@rchh/lowcode-plugin-zh-en';
 import CodeGenPlugin from '@alilc/lowcode-plugin-code-generator';
-import DataSourcePanePlugin from '@alilc/lowcode-plugin-datasource-pane';
-import SchemaPlugin from '@alilc/lowcode-plugin-schema';
-import CodeEditor from "@alilc/lowcode-plugin-code-editor";
-import ManualPlugin from "@alilc/lowcode-plugin-manual";
-import Inject, { injectAssets } from '@alilc/lowcode-plugin-inject';
-import SimulatorResizer from '@alilc/lowcode-plugin-simulator-select';
+import DataSourcePanePlugin from '@rchh/lowcode-plugin-datasource-pane';
+import SchemaPlugin from '@rchh/lowcode-plugin-schema';
+import CodeEditor from "@rchh/lowcode-plugin-code-editor";
+import ManualPlugin from "@rchh/lowcode-plugin-manual";
+import Inject, { injectAssets } from '@rchh/lowcode-plugin-inject';
+import SimulatorResizer from '@rchh/lowcode-plugin-simulator-select';
 
 import Logo from './logo';
 import { preview, resetSchema, saveSchema } from 'src/utils';

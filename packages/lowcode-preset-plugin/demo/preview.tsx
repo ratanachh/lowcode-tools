@@ -1,10 +1,10 @@
 import ReactDOM from 'react-dom';
 import React, { useState } from 'react';
 import { Loading } from '@alifd/next';
-import { buildComponents, assetBundle, AssetLevel, AssetLoader } from '@alilc/lowcode-utils';
-import ReactRenderer from '@alilc/lowcode-react-renderer';
-import { injectComponents } from '@alilc/lowcode-plugin-inject';
-import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
+import { buildComponents, assetBundle, AssetLevel, AssetLoader } from '@rchh/lowcode-utils';
+import ReactRenderer from '@rchh/lowcode-react-renderer';
+import { injectComponents } from '@rchh/lowcode-plugin-inject';
+import { createFetchHandler } from '@rchh/lowcode-datasource-fetch-handler'
 
 import { getPageSchemaFromLocalStorage, getPackages } from '../src/utils';
 

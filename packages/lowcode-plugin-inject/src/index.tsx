@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { plugins, setters } from '@alilc/lowcode-engine';
-import { IPublicModelPluginContext, IPublicEnumPluginRegisterLevel, IPublicTypePlugin } from '@alilc/lowcode-types';
+import { plugins, setters } from '@rchh/lowcode-engine';
+import { IPublicModelPluginContext, IPublicEnumPluginRegisterLevel, IPublicTypePlugin } from '@rchh/lowcode-types';
 import { getInjectedResource, injectAssets, needInject, injectComponents, filterPackages, setInjectServerHost, type InjectOptions } from './utils';
 import { Notification } from '@alifd/next';
 import { AppInject } from './appInject';

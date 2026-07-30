@@ -1,5 +1,5 @@
 
-import { ComponentMetadata, Snippet } from '@alilc/lowcode-types';
+import { ComponentMetadata, Snippet } from '@rchh/lowcode-types';
 
 const ButtonMeta: ComponentMetadata = {
   "componentName": "Button",
@@ -9,7 +9,7 @@ const ButtonMeta: ComponentMetadata = {
   "devMode": "proCode",
   group: '测试组件',
   "npm": {
-    "package": "@alilc/example-components",
+    "package": "@rchh/example-components",
     "version": "1.0.0",
     "exportName": "Button",
     "main": "src/index.tsx",

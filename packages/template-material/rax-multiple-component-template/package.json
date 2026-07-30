@@ -1,5 +1,5 @@
 {
-  "name": "@alilc/rax-multiple-component-template",
+  "name": "@rchh/rax-multiple-component-template",
   "version": "0.1.1",
   "description": "rax 组件库模板",
   "main": "lib/index.js",
@@ -14,14 +14,16 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "f2elint commit-file-scan",
       "commit-msg": "f2elint commit-msg-scan"
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

@@ -44,14 +44,14 @@ export default (config: WebpackChain, { rootDir, entry, type, pkg, mainFile, gen
     "@ali/visualengine": "var window.VisualEngine",
     "@ali/visualengine-utils": "var window.VisualEngineUtils",
     "@ali/lowcode-engine": "var window.AliLowCodeEngine",
-    "@alilc/lowcode-engine": "var window.AliLowCodeEngine",
+    "@rchh/lowcode-engine": "var window.AliLowCodeEngine",
     "@ali/lowcode-engine-ext": "var window.AliLowCodeEngineExt",
-    "@alilc/lowcode-engine-ext": "var window.AliLowCodeEngineExt",
+    "@rchh/lowcode-engine-ext": "var window.AliLowCodeEngineExt",
     "monaco-editor/esm/vs/editor/editor.api": "var window.monaco",
     "monaco-editor/esm/vs/editor/editor.main.js": "var window.monaco",
-    "@alilc/lowcode-editor-skeleton": "var window.AliLowCodeEngine.common.skeletonCabin",
-    "@alilc/lowcode-editor-core": "var window.AliLowCodeEngine.common.editorCabin",
-    "@alilc/lowcode-designer": "var window.AliLowCodeEngine.common.designerCabin",
+    "@rchh/lowcode-editor-skeleton": "var window.AliLowCodeEngine.common.skeletonCabin",
+    "@rchh/lowcode-editor-core": "var window.AliLowCodeEngine.common.editorCabin",
+    "@rchh/lowcode-designer": "var window.AliLowCodeEngine.common.designerCabin",
   });
 
 

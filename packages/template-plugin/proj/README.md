@@ -8,7 +8,7 @@
 
 ### 注册插件
 ```jsx
-import { plugins } from '@alilc/lowcode-engine';
+import { plugins } from '@rchh/lowcode-engine';
 import <%- componentName %> from '<%- name %>';
 
 // 注册到引擎

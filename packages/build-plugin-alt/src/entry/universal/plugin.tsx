@@ -2,14 +2,14 @@ import * as React from 'react';
 import {
   plugins,
   skeleton,
-} from '@alilc/lowcode-engine';
-import { IPublicModelPluginContext } from '@alilc/lowcode-types';
+} from '@rchh/lowcode-engine';
+import { IPublicModelPluginContext } from '@rchh/lowcode-types';
 import Logo from '../../builtIn/logo';
-import UndoRedo from '@alilc/lowcode-plugin-undo-redo';
-import ComponentsPane from '@alilc/lowcode-plugin-components-pane';
-import ZhEn from '@alilc/lowcode-plugin-zh-en';
-import SchemaPlugin from '@alilc/lowcode-plugin-schema';
-import CodeEditor from "@alilc/lowcode-plugin-code-editor";
+import UndoRedo from '@rchh/lowcode-plugin-undo-redo';
+import ComponentsPane from '@rchh/lowcode-plugin-components-pane';
+import ZhEn from '@rchh/lowcode-plugin-zh-en';
+import SchemaPlugin from '@rchh/lowcode-plugin-schema';
+import CodeEditor from "@rchh/lowcode-plugin-code-editor";
 import { getPageSchema, saveSchema, resetSchema, preview } from './utils';
 import assets from '../../public/assets.json';
 

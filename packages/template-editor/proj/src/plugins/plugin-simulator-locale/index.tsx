@@ -1,5 +1,5 @@
 import React from 'react';
-import { IPublicModelPluginContext } from '@alilc/lowcode-types';
+import { IPublicModelPluginContext } from '@rchh/lowcode-types';
 import { Select } from '@alifd/next';
 
 const Option = Select.Option;

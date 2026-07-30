@@ -10,7 +10,7 @@ module.exports = {
       {
         engineScope: '@alilc',
         extraAssets: [
-          'https://unpkg.com/@alilc/lowcode-materials@1.0.3/build/lowcode/assets-prod.json'
+          'https://unpkg.com/@rchh/lowcode-materials@1.0.3/build/lowcode/assets-prod.json'
         ],
         type: 'setter',
         setterName: 'SelectSetter',

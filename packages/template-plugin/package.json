@@ -1,5 +1,5 @@
 {
-  "name": "@alilc/lowcode-template-plugin",
+  "name": "@rchh/lowcode-template-plugin",
   "version": "1.0.8",
   "description": "Ali lowCode engine plugin template",
   "main": "index.js",

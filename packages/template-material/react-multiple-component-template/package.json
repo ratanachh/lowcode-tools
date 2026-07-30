@@ -1,5 +1,5 @@
 {
-  "name": "@alilc/react-multiple-component-template",
+  "name": "@rchh/react-multiple-component-template",
   "version": "0.1.6",
   "description": "react 组件库模板",
   "files": [
@@ -11,14 +11,16 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "f2elint commit-file-scan",
       "commit-msg": "f2elint commit-msg-scan"
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

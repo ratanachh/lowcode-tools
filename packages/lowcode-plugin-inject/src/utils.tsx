@@ -3,7 +3,7 @@ import fetchJsonp from 'fetch-jsonp';
 import * as React from 'react';
 import { pascal } from 'case';
 import { Notification } from '@alifd/next';
-import { buildComponents } from '@alilc/lowcode-utils';
+import { buildComponents } from '@rchh/lowcode-utils';
 
 const typeMap = {
   vc: ['prototype', 'view'],

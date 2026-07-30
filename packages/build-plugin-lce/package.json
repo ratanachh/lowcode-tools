@@ -1,5 +1,5 @@
 {
-  "name": "@alilc/build-plugin-lce",
+  "name": "@rchh/build-plugin-lce",
   "version": "0.0.5",
   "description": "build plugin for LowCodeEngine",
   "main": "src/index.js",
@@ -76,5 +76,9 @@
   "devDependencies": {
     "@types/node": "^12.12.18"
   },
-  "repository": "https://github.com/alibaba/lowcode-tools.git"
+  "repository": "https://github.com/alibaba/lowcode-tools.git",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

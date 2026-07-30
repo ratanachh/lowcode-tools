@@ -1,4 +1,4 @@
-import { setters, init } from '@alilc/lowcode-engine';
+import { setters, init } from '@rchh/lowcode-engine';
 import DemoSetter from '__lowcode-setter-demo__';
 import basePlugin from './universal/plugin';
 import './universal/global.scss';

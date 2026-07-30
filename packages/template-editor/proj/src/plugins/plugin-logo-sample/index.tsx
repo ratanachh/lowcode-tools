@@ -1,5 +1,5 @@
 import React from 'react';
-import { IPublicModelPluginContext } from '@alilc/lowcode-types';
+import { IPublicModelPluginContext } from '@rchh/lowcode-types';
 import { Dropdown, Menu } from '@alifd/next';
 import './index.scss';
 export interface IProps {

@@ -1,4 +1,4 @@
-import { init, plugins } from '@alilc/lowcode-engine';
+import { init, plugins } from '@rchh/lowcode-engine';
 import DemoPlugin from '__lowcode-plugin-demo__';
 import basePlugin from './universal/plugin';
 import './universal/global.scss';
@@ -15,8 +15,8 @@ import './universal/global.scss';
     disableDefaultSetters: false,
     stayOnTheSameSettingTab: false,
     simulatorUrl: [
-      'https://cdn.jsdelivr.net/npm/@alilc/lowcode-react-simulator-renderer@^1.0.0/dist/js/react-simulator-renderer.js',
-      'https://cdn.jsdelivr.net/npm/@alilc/lowcode-react-simulator-renderer@^1.0.0/dist/css/react-simulator-renderer.css'
+      'https://cdn.jsdelivr.net/npm/@rchh/lowcode-react-simulator-renderer@^1.0.0/dist/js/react-simulator-renderer.js',
+      'https://cdn.jsdelivr.net/npm/@rchh/lowcode-react-simulator-renderer@^1.0.0/dist/css/react-simulator-renderer.css'
     ],
   });
 

@@ -9,7 +9,7 @@ const COMMON_EXTERNALS = {
   '@ali/visualengine': 'var window.VisualEngine',
   '@ali/visualengine-utils': 'var window.VisualEngineUtils',
   '@ali/lowcode-engine': 'var window.AliLowCodeEngine',
-  '@alilc/lowcode-engine': 'var window.AliLowCodeEngine',
+  '@rchh/lowcode-engine': 'var window.AliLowCodeEngine',
   '@ali/lowcode-rax-renderer': 'var window.alilcLowcodeRaxRenderer',
   rax: 'var window.Rax',
   antd: 'var window.antd',
@@ -61,17 +61,17 @@ const ALILC_STATIC_RESOURCES = {
   themeStyleUrl:
     'https://alifd.alicdn.com/npm/@alifd/theme-lowcode-light@0.2.1/dist/next.var.min.css',
   engineCoreCssUrl:
-    'https://uipaas-assets.com/prod/npm/@alilc/lowcode-engine/1.1.7-beta.11/dist/css/engine-core.css',
+    'https://uipaas-assets.com/prod/npm/@rchh/lowcode-engine/1.1.7-beta.11/dist/css/engine-core.css',
   engineExtCssUrl:
-    'https://uipaas-assets.com/prod/npm/@alilc/lowcode-engine-ext/1.0.6-beta.25/dist/css/engine-ext.css',
+    'https://uipaas-assets.com/prod/npm/@rchh/lowcode-engine-ext/1.0.6-beta.25/dist/css/engine-ext.css',
   enginePresetCssUrl:
-    'https://alifd.alicdn.com/npm/@alilc/lowcode-preset-plugin@0.1.2/dist/lowcode-preset-plugin.css',
+    'https://alifd.alicdn.com/npm/@rchh/lowcode-preset-plugin@0.1.2/dist/lowcode-preset-plugin.css',
   engineCoreJsUrl:
-    'https://uipaas-assets.com/prod/npm/@alilc/lowcode-engine/1.1.7-beta.11/dist/js/engine-core.js',
+    'https://uipaas-assets.com/prod/npm/@rchh/lowcode-engine/1.1.7-beta.11/dist/js/engine-core.js',
   engineExtJsUrl:
-    'https://uipaas-assets.com/prod/npm/@alilc/lowcode-engine-ext/1.0.6-beta.25/dist/js/engine-ext.js',
+    'https://uipaas-assets.com/prod/npm/@rchh/lowcode-engine-ext/1.0.6-beta.25/dist/js/engine-ext.js',
   enginePresetJsUrl:
-    'https://alifd.alicdn.com/npm/@alilc/lowcode-preset-plugin@0.1.2/dist/lowcode-preset-plugin.js',
+    'https://alifd.alicdn.com/npm/@rchh/lowcode-preset-plugin@0.1.2/dist/lowcode-preset-plugin.js',
   raxRenderJsUrl: 'https://alifd.alicdn.com/npm/@alilc/lowcode-rax-renderer@1.0.18/dist/index.umd.js',
   raxRenderCssUrl: 'https://alifd.alicdn.com/npm/@alilc/lowcode-rax-renderer@1.0.18/dist/index.css',
 };

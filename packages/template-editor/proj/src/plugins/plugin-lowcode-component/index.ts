@@ -1,4 +1,4 @@
-import { IPublicModelPluginContext } from "@alilc/lowcode-types";
+import { IPublicModelPluginContext } from "@rchh/lowcode-types";
 import lowcodeSchema from './lowcode-schema.json'
 
 const lowcodePlugin = (ctx: IPublicModelPluginContext) => {
