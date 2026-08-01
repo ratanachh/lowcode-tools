@@ -17,16 +17,16 @@ const LocaleSelect: React.FC<IProps> = (props): React.ReactElement => {
         id="select"
         onChange={onChange}
         defaultValue={currentLocaleValue}
-        aria-label="切换画布区域 locale"
+        aria-label="Switch the canvas locale"
         style={{marginRight: 8}}
       >
-        <Option value="zh-CN">中文</Option>
+        <Option value="zh-CN">Chinese</Option>
         <Option value="en-US">English</Option>
       </Select>
     </div>
   );
 };
-// 画布区域语言切换
+// Locale switcher for the canvas area
 const SimulatorLocalePlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {

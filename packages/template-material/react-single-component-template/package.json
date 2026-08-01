@@ -1,7 +1,7 @@
 {
   "name": "@rchh/react-single-component-template",
   "version": "0.1.3",
-  "description": "react 单组件模板",
+  "description": "React single-component template",
   "files": [
     "projectTemplate/"
   ],

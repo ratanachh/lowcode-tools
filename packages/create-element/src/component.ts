@@ -31,12 +31,12 @@ export default async (answers) => {
   const promptList = [{
     type: 'list',
     name: 'packageType',
-    message: '请选择包模式',
+    message: 'Select the package mode',
     choices: [{
-      name: 'react-单组件',
+      name: 'react - single component',
       value: 'react-single',
     }, {
-      name: 'react-组件库',
+      name: 'react - component library',
       value: 'react-multiple',
     }],
     default: 'react-single',

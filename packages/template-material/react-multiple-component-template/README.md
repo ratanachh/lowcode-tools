@@ -1,1 +1,1 @@
-# PC大包组件模板
+# Desktop component library template

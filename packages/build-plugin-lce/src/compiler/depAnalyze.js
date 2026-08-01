@@ -23,7 +23,7 @@ function analyzePackage(pkg, basicComponents) {
   const libraryNames = [];
   if (basicComponents) {
     Object.keys({ ...dependencies, ...devDependencies, ...peerDependencies }).forEach((depName) => {
-      // basic component: antd、@alifd/next、@alife/next、@icedesign/base
+      // basic component: antd, @alifd/next, @alife/next, @icedesign/base
       if (
         [
           ...defaultDynamicImportLibraries,

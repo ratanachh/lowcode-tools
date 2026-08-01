@@ -20,7 +20,7 @@ module.exports = (options = {}, { babelPlugins, babelOptions, rootDir }) => {
 
   const formatedBabelPlugins = (babelPlugins || []).map((plugin) => {
     const [pluginName, pluginOptions, ...restOptions] = Array.isArray(plugin) ? plugin : [plugin];
-    // 用户自定义的 babelPlugins 需要从项目目录寻址
+    // User-defined babelPlugins must be resolved from the project directory
     const pluginPath = require.resolve(pluginName, { paths: [rootDir] });
     return pluginOptions ? [pluginPath, pluginOptions, ...(restOptions || [])] : pluginPath;
   });

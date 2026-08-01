@@ -75,7 +75,7 @@
         },
         "getHelloWorldText2": {
           "type": "JSFunction",
-          "value": "function getHelloWorldText2() {\n  return this.i18n('i18n-jwg27yo3', {\n  name: '絮黎'\n  });\n}"
+          "value": "function getHelloWorldText2() {\n  return this.i18n('i18n-jwg27yo3', {\n  name: 'Ada'\n  });\n}"
         },
         "onTestConstantsButtonClicked": {
           "type": "JSFunction",
@@ -86,7 +86,7 @@
           "value": "function onTestUtilsButtonClicked() {\n  this.utils.demoUtil('param1', 'param2');\n}"
         }
       },
-      "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    });\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    });\n  }\n  getHelloWorldText() {\n    return this.i18n('i18n-jwg27yo4');\n  }\n  getHelloWorldText2() {\n    return this.i18n('i18n-jwg27yo3', {\n      name: '絮黎',\n    });\n  }\n  onTestConstantsButtonClicked() {\n    console.log('constants.ConstantA:', this.constants.ConstantA);\n    console.log('constants.ConstantB:', this.constants.ConstantB);\n\t}\n\tonTestUtilsButtonClicked(){\n    this.utils.demoUtil('param1', 'param2');\n\t}\n}",
+      "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    });\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    });\n  }\n  getHelloWorldText() {\n    return this.i18n('i18n-jwg27yo4');\n  }\n  getHelloWorldText2() {\n    return this.i18n('i18n-jwg27yo3', {\n      name: 'Ada',\n    });\n  }\n  onTestConstantsButtonClicked() {\n    console.log('constants.ConstantA:', this.constants.ConstantA);\n    console.log('constants.ConstantB:', this.constants.ConstantB);\n\t}\n\tonTestUtilsButtonClicked(){\n    this.utils.demoUtil('param1', 'param2');\n\t}\n}",
       "hidden": false,
       "title": "",
       "isLocked": false,
@@ -101,7 +101,7 @@
               "rowGap": 20,
               "colGap": 20
           },
-          "title": "行列容器",
+          "title": "Grid Container",
           "hidden": false,
           "isLocked": false,
           "condition": true,
@@ -112,7 +112,7 @@
                   "id": "node_oclawu71ac4",
                   "docId": "doclawu75i0",
                   "props": {},
-            "title": "行",
+            "title": "Row",
             "hidden": false,
             "isLocked": false,
             "condition": true,
@@ -125,7 +125,7 @@
                     "props": {
                         "colSpan": 1
                     },
-                    "title": "列",
+                    "title": "Column",
                     "hidden": false,
                     "isLocked": false,
                     "condition": true,
@@ -145,7 +145,7 @@
                                 "full": false,
                                 "flex": false
                             },
-                            "title": "段落",
+                            "title": "Paragraph",
                             "hidden": false,
                             "isLocked": false,
                             "condition": true,
@@ -179,7 +179,7 @@
                                             "eventList": [
                                                 {
                                                     "name": "onClick",
-                                                    "description": "点击按钮的回调\n@param {Object} e Event Object",
+                                                    "description": "Callback fired when the button is clicked\n@param {Object} e Event Object",
                                                     "disabled": true
                                                 },
                                                 {
@@ -226,7 +226,7 @@
                                             "eventList": [
                                                 {
                                                     "name": "onClick",
-                                                    "description": "点击按钮的回调\n@param {Object} e Event Object",
+                                                    "description": "Callback fired when the button is clicked\n@param {Object} e Event Object",
                                                     "disabled": true
                                                 },
                                                 {
@@ -268,7 +268,7 @@
               "full": false,
               "flex": false
           },
-          "title": "段落",
+          "title": "Paragraph",
           "hidden": false,
           "isLocked": false,
           "condition": true,
@@ -283,7 +283,7 @@
                       "children": {
                           "type": "JSExpression",
                           "value": "this.getHelloWorldText()",
-                          "mock": "标题标题"
+                          "mock": "Sample Title"
                       },
                       "prefix": "",
                       "classname": "",
@@ -308,7 +308,7 @@
                       "children": {
                           "type": "JSExpression",
                           "value": "this.getHelloWorldText2()",
-                          "mock": "另一个i18n"
+                          "mock": "Another i18n"
                       },
                       "prefix": "",
                       "classname": "",
@@ -331,8 +331,8 @@
   ],
   "i18n": {
     "zh-CN": {
-      "i18n-jwg27yo4": "你好 ",
-      "i18n-jwg27yo3": "{name} 博士"
+      "i18n-jwg27yo4": "Hello ",
+      "i18n-jwg27yo3": "Doctor {name}"
     },
     "en-US": {
       "i18n-jwg27yo4": "Hello ",

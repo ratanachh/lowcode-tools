@@ -18,10 +18,10 @@ export default defineConfig({
       .end()
       .exclude.add(/node_modules/);
 
-    // 删除 dumi 内置插件
+    // Remove the built-in dumi plugins
     memo.plugins.delete('friendly-error');
     memo.plugins.delete('copy');
-    // 配置文件import alias
+    // Import aliases for the config file
     memo.resolve.alias.set('@', join(__dirname, '../src'));
     memo.resolve.alias.set('@components', join(__dirname, '../src/components'));
     memo.resolve.alias.set('<%= projectName %>', join(__dirname, '../src'));
@@ -35,7 +35,7 @@ export default defineConfig({
     type: 'none',
     exclude: [],
   },
-  // md文件中使用@需配置alias
+  // Aliases required to use @ inside markdown files
   alias: {
     '@': join(__dirname, '../src'),
     '@components': join(__dirname, '../src/components'),
@@ -61,7 +61,7 @@ export default defineConfig({
   },
   mfsu: {},
   locales: [
-    ['zh-CN', '中文'],
+    ['zh-CN', 'Chinese'],
     ['en-US', 'English'],
   ],
   outputPath: '../build/docs',

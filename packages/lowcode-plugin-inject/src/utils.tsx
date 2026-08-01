@@ -15,10 +15,10 @@ const typeMap = {
   component: ['meta', 'view'],
 };
 
-const queryFlag = '__injectFrom'; // 不推荐
-const injectTypeFlag = '__injectType'; // 不推荐
-const injectEnvFlag = '__injectEnv'; // 不推荐
-const debugFlag = 'debug'; // 推荐
+const queryFlag = '__injectFrom'; // deprecated
+const injectTypeFlag = '__injectType'; // deprecated
+const injectEnvFlag = '__injectEnv'; // deprecated
+const debugFlag = 'debug'; // preferred
 const arrayFlag = '__components';
 const jsonpFlag = '__injectComponent';
 const prototypeKeyFlag = '__prototype';
@@ -33,10 +33,10 @@ window[jsonpFlag] = function addComponents(component) {
 let injectServerHost = '127.0.0.1';
 
 const searchParams = new URLSearchParams(window.location.search);
-// 是否需要开启 inject 逻辑
+// Whether the inject logic should be enabled
 
-export const needInject = searchParams.get('__injectFrom') // 历史兼容
-  || searchParams.get('__injectType') === 'auto' // 历史兼容
+export const needInject = searchParams.get('__injectFrom') // legacy compatibility
+  || searchParams.get('__injectType') === 'auto' // legacy compatibility
   || searchParams.has('debug')
   || (window as any).injectConfig;
 
@@ -52,7 +52,7 @@ export interface InjectOptions {
   filter?: (url: string) => boolean;
 }
 
-// 获取 inject 资源的 url，格式：['url1', 'url2']
+// Returns the URLs of the injected resources, in the form ['url1', 'url2']
 function getInjectUrls(resourceType, type = 'url', injectOptions?: InjectOptions): Promise<any> {
   const filter = (_urls) => {
     if (injectOptions?.filter) {
@@ -137,7 +137,7 @@ function loadComponentFromSources(sources) {
   return Promise.all(sources.map(url => promiseLoadScript(url)));
 }
 
-// 获取 inject 的资源，格式 [{name, module, pluginType}]
+// Returns the injected resources, in the form [{name, module, pluginType}]
 export async function getInjectedResource(type, injectOptions?: InjectOptions) {
   const urls = await getInjectUrls(type, undefined, injectOptions);
   await loadComponentFromSources(urls);
@@ -174,11 +174,11 @@ function envFilter(injects) {
 
   const urlParams = queryString.parse(window.location.search);
 
-  // 从 window 或者 url 中获取当前是设计器还是预览环境；没有配置则读取 window 是否有 VisualEngine
+  // Read the designer/preview environment from window or the URL; if unset, infer it from the presence of VisualEngine on window
   const env = window.injectEnv || urlParams[injectEnvFlag] || (window.VisualEngine || window.LowcodeEditor || window.AliLowCodeEngine ? 'design' : 'preview') || 'design';
 
   let device = urlParams[injectDeviceFlag] || (window.g_config && window.g_config.device) || (window.pageConfig && window.pageConfig.device) || 'web';
-  if (device === 'both') { // 乐高有双端的能力，开启后 device 是 both
+  if (device === 'both') { // Lego supports both platforms; when enabled the device is 'both'
     device = /Mobile/.test(window.navigator.userAgent) ? 'mobile' : 'web';
   }
 
@@ -189,17 +189,17 @@ function envFilter(injects) {
 
   return injects.filter((item) => {
     if (env === 'design') {
-      // 设计器不需要注入组件的 view 和 vu
+      // The designer does not need the component view or utils injected
       if (['utils'].indexOf(item.type) >= 0) {
         return false;
       }
-      // 注入指定的 prototype
+      // Inject the requested prototype
       if (item.type === 'prototype') {
         if (item.subType && item.subType !== prototypeKey) {
           return false;
         }
         if (!item.subType && prototypeKey) {
-          // 看有没有对应的 prototype.js 如果没有则用默认的
+          // Use the matching prototype.js if one exists, otherwise fall back to the default
           const proto = injects.find(item2 => item2.packageName === item.packageName && item2.type === 'prototype' && item2.subType === prototypeKey);
           if (proto) {
             return false;
@@ -208,17 +208,17 @@ function envFilter(injects) {
       }
     }
     if (env === 'preview') {
-      // 预览不需要注入 prototype、vp、setter、pane
+      // Preview does not need prototype, plugin, setter or pane injected
       if (['prototype', 'plugin', 'setter', 'pane'].indexOf(item.type) >= 0) {
         return false;
       }
-      // PC 端应用不需要加载 view.mobile
+      // Desktop apps do not need to load view.mobile
       if (device === 'web' && item.type === 'view' && item.subType === 'mobile') {
         return false;
       }
-      // 移动端应用如果有 view.mobile 则不需要加载 view，否则还是加载 view
+      // Mobile apps skip the plain view when a view.mobile exists, otherwise they still load the plain view
       if (device === 'mobile' && item.type === 'view' && item.subType !== 'mobile') {
-        // 看当前组件有没有 view.mobile
+        // Check whether this component provides a view.mobile
         const viewMobile = injects.find(item2 => item2.packageName === item.packageName && item2.type === 'view' && item2.subType === 'mobile');
         if (viewMobile) {
           return false;
@@ -269,11 +269,11 @@ export async function injectAssets(assets, injectOptions?: InjectOptions) {
     })
     if (Object.keys(components).length > 0) {
       Notification.success({
-        title: '成功注入以下组件',
+        title: 'Successfully injected the following components',
         content: (
           <div>
             {Object.keys(components).map((name) => (
-              <p>组件：<b>{name}</b></p>
+              <p>Component: <b>{name}</b></p>
             ))}
           </div>
         )
@@ -301,11 +301,11 @@ export async function injectComponents(components, injectOptions?: InjectOptions
   const injectedComponentsForRenderer = await buildComponents(libraryMap, componentsMap, undefined);
   if (Object.keys(injectedComponents).length > 0) {
     Notification.success({
-      title: '成功注入以下组件',
+      title: 'Successfully injected the following components',
       content: (
         <div>
           {Object.keys(injectedComponents).map((name) => (
-            <p>组件：<b>{name}</b></p>
+            <p>Component: <b>{name}</b></p>
           ))}
         </div>
       )

@@ -6,7 +6,7 @@ interface ComponentProps {
 }
 
 export default function ComponentB(props: ComponentProps) {
-  const { title, children = '按钮', ...others } = props;
+  const { title, children = 'Button', ...others } = props;
 
   return (
     <div className="ExampleComponent" {...others}>

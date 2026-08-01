@@ -3,7 +3,7 @@ import TitleSetter from '@alilc/lowcode-setter-title';
 import BehaviorSetter from './setters/behavior-setter';
 import CustomSetter from './setters/custom-setter';
 
-// 保存功能示例
+// Example of registering custom setters
 const CustomSetterSamplePlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {

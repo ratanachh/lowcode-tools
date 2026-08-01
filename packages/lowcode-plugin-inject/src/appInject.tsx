@@ -71,9 +71,9 @@ export function AppInject(ctx: IPublicModelPluginContext, options: any) {
   });
 
   return {
-    // 插件名，注册环境下唯一
+    // Plugin name, unique within the registration environment
     name: 'LowcodePluginInjectAlt',
-    // 依赖的插件（插件名数组）
+    // Names of the plugins this one depends on
     dep: [],
 
     async init() {
@@ -91,7 +91,7 @@ export function AppInject(ctx: IPublicModelPluginContext, options: any) {
       subPlugin.meta = {
         dependencies: [],
         engines: {
-          lowcodeEngine: '^1.0.0', // 插件需要配合 ^1.0.0 的引擎才可运行
+          lowcodeEngine: '^1.0.0', // This plugin requires an engine matching ^1.0.0
         },
       };
 
@@ -131,7 +131,7 @@ export function AppInject(ctx: IPublicModelPluginContext, options: any) {
         type: 'PanelDock',
         props: {
           icon: <Icon />,
-          description: '调试',
+          description: 'Debug',
           className: 'inject-pane-icon',
         },
         index: 2,

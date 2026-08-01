@@ -1,15 +1,15 @@
 # <%= projectName %>
 
-一个面向 PC 的业务组件库
+A desktop-oriented business component library
 
-## 调试
-启动调试
+## Development
+Start the dev environment
 
 ```
-npm run lowcode:dev             # 打开开发环境，运行所有组件
+npm run lowcode:dev             # Open the dev environment and run every component
 ```
 
-构建
+Build
 
 ```
 npm run lowcode:build

@@ -1,3 +1,3 @@
-# 低代码引擎生态元素脚手架
+# LowCode Engine ecosystem element scaffolding
 
-使用文档见：https://lowcode-engine.cn/site/docs/guide/expand/editor/cli
+Documentation: https://lowcode-engine.cn/site/docs/guide/expand/editor/cli

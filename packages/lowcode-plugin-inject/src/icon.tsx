@@ -9,7 +9,7 @@ export default function Icon() {
         </svg>
       </div>
       <div>
-        <span>调试</span>
+        <span>Debug</span>
       </div>
     </div>
   );

@@ -43,14 +43,14 @@ const Logo: React.FC<IProps> = (props): React.ReactElement => {
     </div>
   );
 };
-// 示例 Logo widget
+// Example logo widget
 const LogoSamplePlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
       const { skeleton, config } = ctx;
       const scenarioDisplayName = config.get('scenarioDisplayName');
       const scenarioInfo = config.get('scenarioInfo');
-      // 注册 logo widget
+      // Register the logo widget
       skeleton.add({
         area: 'topArea',
         type: 'Widget',

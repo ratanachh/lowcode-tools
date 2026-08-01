@@ -8,10 +8,10 @@ const config =  {
   // locale: 'zh-CN',
   enableCondition: true,
   enableCanvasLock: true,
-  // 默认绑定变量
+  // Enable variable binding by default
   supportVariableGlobally: true,
-  // simulatorUrl 在当 engine-core.js 同一个父路径下时是不需要配置的！！！
-  // 这里因为用的是 alifd cdn，在不同 npm 包，engine-core.js 和 react-simulator-renderer.js 是不同路径
+  // simulatorUrl does not need to be configured when it shares a parent path with engine-core.js.
+  // It is set here because the alifd CDN serves engine-core.js and react-simulator-renderer.js from different npm packages and paths.
   simulatorUrl: [
     'https://alifd.alicdn.com/npm/@rchh/lowcode-react-simulator-renderer@latest/dist/css/react-simulator-renderer.css',
     'https://alifd.alicdn.com/npm/@rchh/lowcode-react-simulator-renderer@latest/dist/js/react-simulator-renderer.js'
@@ -32,20 +32,20 @@ const config =  {
     return {
       name: 'editor-init',
       async init() {
-        // 修改面包屑组件的分隔符属性setter
+        // Override the separator prop setter of the breadcrumb component
         const assets = await (
           await fetch(
             `https://alifd.alicdn.com/npm/@rchh/lowcode-materials/build/lowcode/assets-prod.json`
           )
         ).json();
-        // 设置物料描述
+        // Set the material assets description
         const { material, project } = ctx;
   
         await material.setAssets(assets);
   
         const schema = await getPageSchema();
   
-        // 加载 schema
+        // Load the schema
         project.openDocument(schema);
       },
     };

@@ -178,7 +178,7 @@ const babelCompile = async ({
         });
       }
     });
-    // 检查 .gitignore 如果没有产出路径，则增加该配置
+    // Add the output path to .gitignore if it is not already ignored
     const gitignorePath = findGitIgnorePath(rootDir);
     if (gitignorePath) {
       const gitignoreFile = fs.readFileSync(gitignorePath, "utf-8");
@@ -188,7 +188,7 @@ const babelCompile = async ({
       }
     }
   });
-  // 生成声明文件
+  // Generate the type declaration files
   dts(compileInfo, {
     log: console,
   })

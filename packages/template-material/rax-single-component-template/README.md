@@ -1,1 +1,1 @@
-# 移动端单包组件模板
+# Mobile single-component package template

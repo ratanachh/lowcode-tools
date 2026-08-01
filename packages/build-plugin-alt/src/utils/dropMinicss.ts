@@ -1,7 +1,7 @@
 import Config from "webpack-chain"
 
 /**
- * 去除 minicss 的逻辑
+ * Removes the mini-css extraction logic from the webpack config.
  * @param {*} config 
  */
 export default (config: Config) => {

@@ -18,14 +18,14 @@ const generateProjectSchema = (pageSchema: any, i18nSchema: any): IPublicTypePro
 export const saveSchema = async (scenarioName: string = 'unknown') => {
   setProjectSchemaToLocalStorage(scenarioName);
   await setPackagesToLocalStorage(scenarioName);
-  Message.success('成功保存到本地');
+  Message.success('Saved to local storage');
 };
 
 export const resetSchema = async (scenarioName: string = 'unknown') => {
   try {
     await new Promise<void>((resolve, reject) => {
       Dialog.confirm({
-        content: '确定要重置吗？您所有的修改都将消失！',
+        content: 'Are you sure you want to reset? All of your changes will be lost.',
         onOk: () => {
           resolve();
         },
@@ -44,7 +44,7 @@ export const resetSchema = async (scenarioName: string = 'unknown') => {
 
   setProjectSchemaToLocalStorage(scenarioName);
   await setPackagesToLocalStorage(scenarioName);
-  Message.success('成功重置页面');
+  Message.success('Page reset');
 }
 
 const getLSName = (scenarioName: string, ns: string = 'projectSchema') => `${scenarioName}:${ns}`;

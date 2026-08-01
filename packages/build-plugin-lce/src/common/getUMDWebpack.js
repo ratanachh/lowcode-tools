@@ -83,12 +83,12 @@ module.exports = ({ context, compileOptions, extNames, hasMain }) => {
 
     /**
      * see [rfc](https://github.com/ice-lab/iceworks-cli/issues/153).
-     * if `basicComponents` is `undefined`，concat `defaultDynamicImportLibraries`.
+     * if `basicComponents` is `undefined`, concat `defaultDynamicImportLibraries`.
      * if `basicComponents` is `false`, escape all default behavior.
      * otherwise, merge `defaultDynamicImportLibraries` to `basicComponets` and deduplicate.
     */
     const validBasicComponent = (basicComponents ? [...basicComponents, ...defaultDynamicImportLibraries] : [])
-      // if `external` item is a function，one have to deal with it himself
+      // if an `external` item is a function, the caller has to handle it themselves
       .filter((externalKey) => Object.keys(externals).includes(externalKey) && typeof externals[externalKey] !== 'function');
 
     if (validBasicComponent.length) {

@@ -4,7 +4,7 @@ import {
   saveSchema,
 } from '../../services/mockService';
 
-// 保存功能示例
+// Example of the preview feature
 const PreviewSamplePlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
@@ -26,7 +26,7 @@ const PreviewSamplePlugin = (ctx: IPublicModelPluginContext) => {
         },
         content: (
           <Button type="primary" onClick={() => doPreview()}>
-            预览
+            Preview
           </Button>
         ),
       });

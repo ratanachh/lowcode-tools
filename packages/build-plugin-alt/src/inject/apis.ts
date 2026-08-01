@@ -80,8 +80,8 @@ const init = async () => {
     }
     data = Object.values(data);
 
-    data = uniqWith(data as any[], isEqual); // 去重
-    // check inject 是否可访问
+    data = uniqWith(data as any[], isEqual); // Deduplicate
+    // Check whether the injected resources are reachable
     const checkData = (await Promise.all((data as any[]).map(checkUrl))).filter(Boolean);
     ctx.body = makeJsonpStr(callbackName, {
       success: !isEmpty(data),

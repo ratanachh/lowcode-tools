@@ -73,7 +73,7 @@ export default function (babel: { types: typeof BabelTypes }): {
   return {
     visitor: {
       ExportDefaultDeclaration(path, state) {
-        // 如果不是入口文件，则不做任何处理
+        // Skip any file that is not the entry file
         if (state.opts.filename !== state.filename) return;
         if (t.isIdentifier(path.node.declaration)) {
           const declarationName = path.node.declaration.name;

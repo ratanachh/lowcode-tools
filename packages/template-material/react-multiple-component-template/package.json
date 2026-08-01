@@ -1,7 +1,7 @@
 {
   "name": "@rchh/react-multiple-component-template",
   "version": "0.1.6",
-  "description": "react 组件库模板",
+  "description": "React component library template",
   "files": [
     "projectTemplate/*"
   ],

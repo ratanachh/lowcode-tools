@@ -5,7 +5,7 @@ import {
   resetSchema,
 } from '../../services/mockService';
 
-// 保存功能示例
+// Example of the save feature
 const SaveSamplePlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
@@ -21,7 +21,7 @@ const SaveSamplePlugin = (ctx: IPublicModelPluginContext) => {
         },
         content: (
           <Button onClick={() => saveSchema(scenarioName)}>
-            保存到本地
+            Save to Local
           </Button>
         ),
       });
@@ -34,7 +34,7 @@ const SaveSamplePlugin = (ctx: IPublicModelPluginContext) => {
         },
         content: (
           <Button onClick={() => resetSchema(scenarioName)}>
-            重置页面
+            Reset Page
           </Button>
         ),
       });

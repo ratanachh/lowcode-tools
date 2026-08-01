@@ -30,7 +30,7 @@ const basePackages = [
     ]
   },
   {
-    title: 'fusion组件库',
+    title: 'Fusion Component Library',
     package: '@alifd/next',
     version: '1.25.23',
     urls: [
@@ -254,7 +254,7 @@ async function handleExtraAssets(assets, extraAssets) {
               if (!snippet.sort) {
                 snippet.sort = {
                   category: comp.title,
-                  group: '原子组件',
+                  group: 'Atomic Components',
                 };
               }
               return snippet;

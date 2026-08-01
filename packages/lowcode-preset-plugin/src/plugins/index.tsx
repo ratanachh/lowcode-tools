@@ -25,7 +25,7 @@ const registerDefaultPlugins = async (presetConfig) => {
 
   // await plugins.register(Inject);
 
-  // plugin API 见 https://lowcode-engine.cn/site/docs/api/plugins
+  // Plugin API reference: https://lowcode-engine.cn/site/docs/api/plugins
   SchemaPlugin.pluginName = 'SchemaPlugin';
   await plugins.register(SchemaPlugin);
 
@@ -40,7 +40,7 @@ const registerDefaultPlugins = async (presetConfig) => {
         const { logo: customLogoConfig } = presetConfig || {};
 
 
-        // 注册 logo 面板
+        // Register the logo widget
         skeleton.add({
           area: 'topArea',
           type: 'Widget',
@@ -55,7 +55,7 @@ const registerDefaultPlugins = async (presetConfig) => {
           },
         });
 
-        // 注册组件面板
+        // Register the components pane
         const componentsPane = skeleton.add({
           area: 'leftArea',
           type: 'PanelDock',
@@ -65,7 +65,7 @@ const registerDefaultPlugins = async (presetConfig) => {
           props: {
             align: 'top',
             icon: 'zujianku',
-            description: '组件库',
+            description: 'Component Library',
           },
         });
         componentsPane?.disable?.();
@@ -78,17 +78,16 @@ const registerDefaultPlugins = async (presetConfig) => {
   builtinPluginRegistry.pluginName = 'builtinPluginRegistry';
   await plugins.register(builtinPluginRegistry);
 
-  // 设置内置 setter 和事件绑定、插件绑定面板
+  // Set up the built-in setters and the event/variable binding dialogs
   const setterRegistry = (ctx: ILowCodePluginContext) => {
     const { setterMap, pluginMap } = AliLowCodeEngineExt;
     return {
       name: 'ext-setters-registry',
       async init() {
         const { setters, skeleton } = ctx;
-        // 注册setterMap
+        // Register the setter map
         setters.registerSetter(setterMap);
-        // 注册插件
-        // 注册事件绑定面板
+        // Register the event binding dialog
         skeleton.add({
           area: 'centerArea',
           type: 'Widget',
@@ -97,7 +96,7 @@ const registerDefaultPlugins = async (presetConfig) => {
           props: {},
         });
 
-        // 注册变量绑定面板
+        // Register the variable binding dialog
         skeleton.add({
           area: 'centerArea',
           type: 'Widget',
@@ -111,10 +110,10 @@ const registerDefaultPlugins = async (presetConfig) => {
   setterRegistry.pluginName = 'setterRegistry';
   await plugins.register(setterRegistry);
 
-  // 注册回退/前进
+  // Register undo/redo
   await plugins.register(UndoRedoPlugin);
 
-  // 注册中英文切换
+  // Register the Chinese/English locale switcher
   await plugins.register(ZhEnPlugin);
 
   const previewSample = (ctx: ILowCodePluginContext) => {
@@ -141,7 +140,7 @@ const registerDefaultPlugins = async (presetConfig) => {
   previewSample.pluginName = 'previewSample';
   await plugins.register(previewSample);
 
-  // 注册保存面板
+  // Register the save widget
   const saveSample = (ctx: ILowCodePluginContext) => {
     return {
       name: 'saveSample',
@@ -156,7 +155,7 @@ const registerDefaultPlugins = async (presetConfig) => {
           },
           content: (
             <Button type="secondary" onClick={resetSchema}>
-              重置
+              Reset
             </Button>
           ),
         });
@@ -169,7 +168,7 @@ const registerDefaultPlugins = async (presetConfig) => {
           },
           content: (
             <Button type="primary" onClick={saveSchema}>
-              保存
+              Save
             </Button>
           ),
         });
@@ -184,12 +183,12 @@ const registerDefaultPlugins = async (presetConfig) => {
   saveSample.pluginName = 'saveSample';
   await plugins.register(saveSample);
 
-  // 注册出码插件
+  // Register the code generation plugin
   CodeGenPlugin.pluginName = 'CodeGenPlugin';
   await plugins.register(CodeGenPlugin);
 
   DataSourcePanePlugin.pluginName = 'DataSourcePane';
-  // 插件参数声明 & 传递，参考：https://lowcode-engine.cn/site/docs/api/plugins#设置插件参数版本示例
+  // Declaring and passing plugin options, see https://lowcode-engine.cn/site/docs/api/plugins
   await plugins.register(DataSourcePanePlugin, {
     importPlugins: [],
     dataSourceTypes: [
@@ -205,7 +204,7 @@ const registerDefaultPlugins = async (presetConfig) => {
   CodeEditor.pluginName = 'CodeEditor';
   await plugins.register(CodeEditor);
 
-  console.log('完成内置插件注册')
+  console.log('Built-in plugin registration complete')
 }
 
 export default registerDefaultPlugins;

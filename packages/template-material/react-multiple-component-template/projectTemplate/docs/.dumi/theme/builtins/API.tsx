@@ -6,11 +6,11 @@ import './index.scss';
 
 const LOCALE_TEXTS = {
   'zh-CN': {
-    name: '参数',
-    description: '说明',
-    type: '类型',
-    default: '默认值',
-    required: '(必选)',
+    name: 'Name',
+    description: 'Description',
+    type: 'Type',
+    default: 'Default',
+    required: '(required)',
   },
   'en-US': {
     name: 'Name',

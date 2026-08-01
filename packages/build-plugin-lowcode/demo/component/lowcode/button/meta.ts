@@ -7,7 +7,7 @@ const ButtonMeta: ComponentMetadata = {
   "docUrl": "",
   "screenshot": "",
   "devMode": "proCode",
-  group: '测试组件',
+  group: 'Test Components',
   "npm": {
     "package": "@rchh/example-components",
     "version": "1.0.0",

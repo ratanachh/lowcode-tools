@@ -1,4 +1,4 @@
-/** 生成 lowcode 的入口文件（meta.js, view.js） */
+/** Generates the lowcode entry files (meta.js, view.js). */
 const fs = require("fs-extra");
 const path = require("path");
 const babel = require("@babel/core");

@@ -5,14 +5,14 @@ export default class BuiltIn extends React.Component<{ custom: any }> {
   props: { custom: any; };
   renderEmpty() {
     return (
-      <div className="placeholder">Setter 设置的值会显示在这里</div>
+      <div className="placeholder">The value set by the setter will be displayed here</div>
     )
   }
   renderCustomProp() {
     const { custom } = this.props;
     return (
       <div className="content">
-        Setter 设置的值为
+        The value set by the setter is
         {JSON.stringify(custom, null, ' ')}
       </div>
     )

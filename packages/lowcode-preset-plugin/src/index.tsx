@@ -13,10 +13,10 @@ const defaultConfig = {
   // locale: 'zh-CN',
   enableCondition: true,
   enableCanvasLock: true,
-  // 默认绑定变量
+  // Enable variable binding by default
   supportVariableGlobally: true,
-  // simulatorUrl 在当 engine-core.js 同一个父路径下时是不需要配置的！！！
-  // 这里因为用的是 alifd cdn，在不同 npm 包，engine-core.js 和 react-simulator-renderer.js 是不同路径
+  // simulatorUrl does not need to be configured when it shares a parent path with engine-core.js.
+  // It is set here because the alifd CDN serves engine-core.js and react-simulator-renderer.js from different npm packages and paths.
   simulatorUrl: [
     'https://alifd.alicdn.com/npm/@rchh/lowcode-react-simulator-renderer@latest/dist/css/react-simulator-renderer.css',
     'https://alifd.alicdn.com/npm/@rchh/lowcode-react-simulator-renderer@latest/dist/js/react-simulator-renderer.js'
@@ -34,7 +34,7 @@ export default async (cb: IPublicTypePlugin, customPlugins: any, container: HTML
   await registerDefaultPlugins(presetConfig);
   registerDefaultSetters();
 
-  // 处理外部传入初始化回调
+  // Handle the initialization callback passed in from outside
   if (typeof cb === 'function') {
     cb.pluginName = 'editorInit';
     await plugins.register(cb);

@@ -106,7 +106,7 @@
                     "id": "node_ockzs2vw433",
                     "docId": "doclaqkk3b9",
                     "props": {},
-                    "title": "页面头部",
+                    "title": "Page Header",
                     "hidden": false,
                     "isLocked": false,
                     "condition": true,
@@ -120,7 +120,7 @@
                                 "rowGap": 20,
                                 "colGap": 20
                             },
-                            "title": "行列容器",
+                            "title": "Grid Container",
                             "hidden": false,
                             "isLocked": false,
                             "condition": true,
@@ -131,7 +131,7 @@
                                     "id": "node_ockzs2vw435",
                                     "docId": "doclaqkk3b9",
                                     "props": {},
-                                    "title": "行",
+                                    "title": "Row",
                                     "hidden": false,
                                     "isLocked": false,
                                     "condition": true,
@@ -144,7 +144,7 @@
                                             "props": {
                                                 "colSpan": 1
                                             },
-                                            "title": "列",
+                                            "title": "Column",
                                             "hidden": false,
                                             "isLocked": false,
                                             "condition": true,
@@ -161,7 +161,7 @@
                                                         "textSpacing": true,
                                                         "align": "left"
                                                     },
-                                                    "title": "段落",
+                                                    "title": "Paragraph",
                                                     "hidden": false,
                                                     "isLocked": false,
                                                     "condition": true,
@@ -176,7 +176,7 @@
                                                                 "children": {
                                                                     "type": "JSExpression",
                                                                     "value": "this.state.info?.info",
-                                                                    "mock": "标题标题"
+                                                                    "mock": "Sample Title"
                                                                 },
                                                                 "mark": false,
                                                                 "code": false,
@@ -220,7 +220,7 @@
               "background": "lining",
               "ref": "nextpage-3cc814e7"
           },
-          "title": "页面",
+          "title": "Page",
           "hidden": false,
           "isLocked": false,
           "condition": true,
@@ -236,7 +236,7 @@
                       },
                       "noPadding": false,
                       "noBorder": false,
-                      "title": "区域标题",
+                      "title": "Section Title",
                       "rowGap": 20,
                       "colGap": 20,
                       "background": "surface",
@@ -247,7 +247,7 @@
                       "mode": "transparent",
                       "childTotalColumns": 12
                   },
-                  "title": "区域",
+                  "title": "Section",
                   "hidden": false,
                   "isLocked": false,
                   "condition": true,
@@ -262,7 +262,7 @@
                               "rowSpan": 1,
                               "mode": "procard",
                               "isAutoContainer": true,
-                              "title": "区块标题",
+                              "title": "Block Title",
                               "hasDivider": true,
                               "loading": false,
                               "hasCollapse": false,
@@ -284,7 +284,7 @@
                                       "rowGap": 20,
                                       "colGap": 20
                                   },
-                                  "title": "行列容器",
+                                  "title": "Grid Container",
                                   "hidden": false,
                                   "isLocked": false,
                                   "condition": true,
@@ -295,7 +295,7 @@
                                           "id": "node_oclat5fpb6gd",
                                           "docId": "doclat87b8r",
                                           "props": {},
-                                          "title": "行",
+                                          "title": "Row",
                                           "hidden": false,
                                           "isLocked": false,
                                           "condition": true,
@@ -308,7 +308,7 @@
                                                   "props": {
                                                       "colSpan": 1
                                                   },
-                                                  "title": "列",
+                                                  "title": "Column",
                                                   "hidden": false,
                                                   "isLocked": false,
                                                   "condition": true,
@@ -325,7 +325,7 @@
                                                               "textSpacing": true,
                                                               "align": "left"
                                                           },
-                                                          "title": "段落",
+                                                          "title": "Paragraph",
                                                           "hidden": false,
                                                           "isLocked": false,
                                                           "condition": true,
@@ -341,7 +341,7 @@
                                                                       "size": "medium",
                                                                       "htmlType": "button",
                                                                       "component": "button",
-                                                                      "children": "测试constants",
+                                                                      "children": "Test constants",
                                                                       "iconSize": "xxs",
                                                                       "loading": false,
                                                                       "text": false,
@@ -358,7 +358,7 @@
                                                                           "eventList": [
                                                                               {
                                                                                   "name": "onClick",
-                                                                                  "description": "点击按钮的回调\n@param {Object} e Event Object",
+                                                                                  "description": "Callback fired when the button is clicked\n@param {Object} e Event Object",
                                                                                   "disabled": true
                                                                               },
                                                                               {
@@ -389,7 +389,7 @@
                                                                       "size": "medium",
                                                                       "htmlType": "button",
                                                                       "component": "button",
-                                                                      "children": "测试utils",
+                                                                      "children": "Test utils",
                                                                       "iconSize": "xxs",
                                                                       "loading": false,
                                                                       "text": false,
@@ -407,7 +407,7 @@
                                                                           "eventList": [
                                                                               {
                                                                                   "name": "onClick",
-                                                                                  "description": "点击按钮的回调\n@param {Object} e Event Object",
+                                                                                  "description": "Callback fired when the button is clicked\n@param {Object} e Event Object",
                                                                                   "disabled": true
                                                                               },
                                                                               {

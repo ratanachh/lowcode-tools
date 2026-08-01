@@ -25,14 +25,14 @@ export function Pane(props: {
       label: resource.description || resource.resourceName,
       value: resource.resourceName,
       children: resource.editorViews?.map((view) => ({
-        label: view.viewName + '视图',
+        label: `${view.viewName} view`,
         value: view.viewName
       }))
     }
   });
 
   options.unshift({
-    label: '全局',
+    label: 'Global',
     value: 'global',
   });
 
@@ -64,7 +64,7 @@ export function Pane(props: {
     return (
       <div className="inject-setting-panel-empty">
         <div className="inject-setting-panel-empty-title">
-          未检测到调试插件/组件
+          No debug plugins or components detected
         </div>
       </div>
     )
@@ -73,7 +73,7 @@ export function Pane(props: {
   return (
     <div className="inject-setting-panel">
       <span className="inject-setting-panel-title">
-        设计器插件：
+        Designer plugins:
       </span>
       <span style={{ float: 'right' }}>
         <Button
@@ -83,11 +83,11 @@ export function Pane(props: {
             props.injectConfig.save();
             window.location.reload();
           }}
-        >重置插件配置</Button>
+        >Reset Plugin Config</Button>
       </span>
       <Table className="inject-setting-panel-table" dataSource={dataSource}>
-        <Table.Column title="插件名字" htmlTitle="插件" dataIndex="pluginName" />
-        <Table.Column title="调试注册视图" dataIndex="pluginName" cell={(pluginName, index, record) => (
+        <Table.Column title="Plugin Name" htmlTitle="Plugin" dataIndex="pluginName" />
+        <Table.Column title="Debug Registration Views" dataIndex="pluginName" cell={(pluginName, index, record) => (
           <>
             {
               options.map(resource => {
@@ -147,7 +147,7 @@ function InjectItem(props: {
 
   return (
     <div>
-      <span className="inject-setting-panel-title">{props.title}：</span>
+      <span className="inject-setting-panel-title">{props.title}:</span>
       <div className="inject-setting-panel-inject-item">
         {props.injectItems && props.injectItems.map((item) => (
           <span>{item.name}</span>

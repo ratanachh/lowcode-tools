@@ -7,7 +7,7 @@ const ButtonMeta: ComponentMetadata = {
   "docUrl": "",
   "screenshot": "",
   "devMode": "proCode",
-  group: '测试组件',
+  group: 'Test Components',
   "npm": {
     "package": "@rchh/example-components",
     "version": "1.0.0",
@@ -22,7 +22,7 @@ const ButtonMeta: ComponentMetadata = {
         name: 'title',
         title: {
           label: 'title',
-          tip: "标题",
+          tip: "Title",
         },
         setter: ['StringSetter', 'VariableSetter', 'InputSetter'],
       },

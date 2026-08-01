@@ -148,8 +148,8 @@ function getUsedComponentViews(rootDir, targetDir = 'lowcode', components) {
 }
 
 /**
- * 将 css 打包到 js 文件中
- * @param {object} config webpack chain 配置
+ * Bundles the CSS into the JS output.
+ * @param {object} config webpack chain configuration
  */
 function useStyleLoader(config) {
   const cssRule = config.module.rule('css');
@@ -494,7 +494,7 @@ async function start(options, pluginOptions) {
 
     config.devServer.https(Boolean(https));
     config.devServer.set('transportMode', 'ws');
-    // WSL 环境下正常的文件 watch 失效，需切换为 poll 模式
+    // Normal file watching does not work under WSL, so fall back to polling
     if (isWsl) {
       config.merge({
         devServer: {
@@ -548,7 +548,7 @@ async function initLowCodeSchema(
   }
   let result = await parser.default({ accesser: 'local', entry, npmClient });
   if (!result) {
-    // 未解析出结果，默认生成结果
+    // Nothing was parsed, fall back to a generated default
     result = [
       formatComponentSchema({
         componentName: PARSED_NPM_NAME.uniqueName,
@@ -827,7 +827,7 @@ async function bundleEditorView(
     componentViews = `{
       ...SingleComponentData
     }`;
-    // default 不一定存在，export { default } 不安全可能会报错
+    // `default` may not exist, so a bare `export { default }` can throw
     componentViewsExportStr = `\nconst entryDefault = componentInstances.default;\nexport { entryDefault as default };\nexport * from '${lowcodeViewPath}';`;
   } else {
     const _componentViews = getUsedComponentViews(rootDir, lowcodeDir, components) || [];
@@ -841,7 +841,7 @@ async function bundleEditorView(
         return `const ${component} = getRealComponent(${component}Data, '${component}');\nexport { ${component} };`;
       })
       .join('\n');
-    // default 不一定存在，export { default } 不安全可能会报错
+    // `default` may not exist, so a bare `export { default }` can throw
     componentViewsExportStr += `\nconst entryDefault = componentInstances.default;\nexport { entryDefault as default }`;
     componentViewsImportStr = _componentViews
       .map((component) => {
@@ -1303,7 +1303,7 @@ async function bundleComponentMeta(webPackConfig, options, pluginOptions, execCo
         `${buildTarget}/${lowcodeDir}/${componentJsPath}.js`,
       );
 
-      // 把 meta.js 里面的 window 替换成 this
+      // Replace `window` inside meta.js with `this`
       const jsContent = fse.readFileSync(originPath, 'utf-8');
       const jsContentTarget = jsContent.replace('window', 'this');
       fse.outputFileSync(originPath, jsContentTarget);

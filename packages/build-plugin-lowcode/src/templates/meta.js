@@ -10,39 +10,39 @@ const componentCategorySort = {};
 function generateComponentList(components) {
   const componentList = [
     {
-      title: '常用',
+      title: 'Common',
       icon: '',
       children: [],
     },
     {
-      title: '容器',
+      title: 'Container',
       icon: '',
       children: [],
     },
     {
-      title: '导航',
+      title: 'Navigation',
       icon: '',
       children: [],
     },
     {
-      title: '内容',
+      title: 'Content',
       icon: '',
       children: [],
     },
     {
-      title: 'Feedback 反馈',
+      title: 'Feedback',
       icon: '',
       children: [],
     },
   ];
 
   const groupMap = {
-    原子组件: true,
+    'Atomic Components': true,
   };
   const compGroup = {};
 
   components.forEach((comp) => {
-    const category = comp.category || '其他';
+    const category = comp.category || 'Others';
     if (comp.group && !compGroup[comp.componentName]) {
       compGroup[comp.componentName] = comp.group;
     }
@@ -66,7 +66,7 @@ function generateComponentList(components) {
         title: comp.title || comp.componentName,
         sort: {
           category: target.title,
-          group: compGroup[comp.componentName] || '原子组件',
+          group: compGroup[comp.componentName] || 'Atomic Components',
           priority: componentCategorySort[target.title] || 0,
         },
         icon: '',

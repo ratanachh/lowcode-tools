@@ -8,10 +8,10 @@
 
 <div align="center">
 
-低代码引擎工具链（脚手架/开发插件/调试插件）
+LowCode Engine toolchain (scaffolding / build plugins / debugging plugins)
 
 </div>
 
-## 使用文档
+## Documentation
 
 https://lowcode-engine.cn/site/docs/guide/expand/editor/cli

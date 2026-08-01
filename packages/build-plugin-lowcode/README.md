@@ -1,16 +1,16 @@
-## 概述
+## Overview
 
-## 使用文档
+## Documentation
 
 ```ts
 export interface LowcodeOptions {
-  builtinAssets?: Array<string|Assets>; // 会作为内置资产保存到构建产物中
-  extraAssets?: Array<string|Assets>; // 只在调试环境加载到资产包中
-  noParse?: boolean; // 关闭自动解析生成 lowcode meta
-  categories?: string[]; // 组件在组件面板中的分类
-  groups?: string[]; // 组件在组件面板中的 tab 分组
+  builtinAssets?: Array<string|Assets>; // Saved into the build output as built-in assets
+  extraAssets?: Array<string|Assets>; // Loaded into the asset bundle only in the debug environment
+  noParse?: boolean; // Disable automatic generation of the lowcode meta
+  categories?: string[]; // Component categories shown in the components pane
+  groups?: string[]; // Component tab groups shown in the components pane
   baseLibrary?: 'react'|'rax';
-  setterMap?: SetterMap; // 注入 setter
+  setterMap?: SetterMap; // Setters to inject
 }
 
 export interface SetterMap {
@@ -23,7 +23,7 @@ export type Assets = {
   urls: string[];
   library: string;
 };
-// 示例
+// Example
 // {
 //   package: 'antd',
 //   version: '4.17.3',
@@ -34,14 +34,14 @@ export type Assets = {
 //   library: 'antd',
 // }
 ```
-## 开发调试
-### 组件开发
+## Development and Debugging
+### Component development
 
-`demo/component`目录下是测试组件的项目，改项目引用了 build-plugin-lowcode，相关配置在在 `demo/component/build.lowcode.js` 中；
+The `demo/component` directory holds a test component project. It depends on build-plugin-lowcode, and the related configuration lives in `demo/component/build.lowcode.js`.
 
-可以修改 build-plugin-lowcode 的代码、修改 demo/component/build.lowcode.js 的配置进行调试；
+You can debug by editing the build-plugin-lowcode source or the configuration in `demo/component/build.lowcode.js`.
 
 ```bash
-# 在 build-plugin-lowcode 根目录下执行启动调试环境
+# Run from the build-plugin-lowcode root directory to start the debug environment
 npm run component:dev
 ```

@@ -28,26 +28,26 @@ async function registerPlugins() {
 
   await plugins.register(EditorInitPlugin, {
     scenarioName: 'general',
-    displayName: '综合场景',
+    displayName: 'General Scenario',
     info: {
       urls: [
         {
-          key: '设计器',
+          key: 'Designer',
           value: 'https://github.com/alibaba/lowcode-demo/tree/main/demo-general',
         },
         {
-          key: 'fusion-ui 物料',
+          key: 'fusion-ui materials',
           value: 'https://github.com/alibaba/lowcode-materials/tree/main/packages/fusion-ui',
         },
         {
-          key: 'fusion 物料',
+          key: 'fusion materials',
           value: 'https://github.com/alibaba/lowcode-materials/tree/main/packages/fusion-lowcode-materials',
         }
       ],
     },
   });
 
-  // 设置内置 setter 和事件绑定、插件绑定面板
+  // Set up the built-in setters and the event/variable binding dialogs
   await plugins.register(DefaultSettersRegistryPlugin);
 
   await plugins.register(LogoSamplePlugin);
@@ -58,10 +58,10 @@ async function registerPlugins() {
 
   await plugins.register(ManualPlugin);
 
-  // 注册回退/前进
+  // Register undo/redo
   await plugins.register(UndoRedoPlugin);
 
-  // 注册中英文切换
+  // Register the Chinese/English locale switcher
   await plugins.register(ZhEnPlugin);
 
   await plugins.register(SetRefPropPlugin);
@@ -70,7 +70,7 @@ async function registerPlugins() {
 
   await plugins.register(LoadIncrementalAssetsWidgetPlugin);
 
-  // 插件参数声明 & 传递，参考：https://lowcode-engine.cn/site/docs/api/plugins#%E8%AE%BE%E7%BD%AE%E6%8F%92%E4%BB%B6%E5%8F%82%E6%95%B0%E7%89%88%E6%9C%AC%E7%A4%BA%E4%BE%8B
+  // Declaring and passing plugin options, see https://lowcode-engine.cn/site/docs/api/plugins
   await plugins.register(DataSourcePanePlugin, {
     importPlugins: [],
     dataSourceTypes: [
@@ -85,7 +85,7 @@ async function registerPlugins() {
 
   await plugins.register(CodeEditorPlugin);
 
-  // 注册出码插件
+  // Register the code generation plugin
   await plugins.register(CodeGenPlugin);
 
   await plugins.register(SaveSamplePlugin);
@@ -94,7 +94,7 @@ async function registerPlugins() {
 
   await plugins.register(CustomSetterSamplePlugin);
 
-  // 设计器区域多语言切换
+  // Locale switcher for the designer canvas
   await plugins.register(SimulatorLocalePlugin);
 
   await plugins.register(lowcodePlugin);
@@ -107,7 +107,7 @@ async function registerPlugins() {
     locale: 'zh-CN',
     enableCondition: true,
     enableCanvasLock: true,
-    // 默认绑定变量
+    // Enable variable binding by default
     supportVariableGlobally: true,
     requestHandlersMap: {
       fetch: createFetchHandler(),

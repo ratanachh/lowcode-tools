@@ -71,7 +71,7 @@ const SamplePreview = () => {
 
   if (!(window as any).setPreviewLocale) {
     // for demo use only, can use this in console to switch language for i18n test
-    // 在控制台 window.setPreviewLocale('en-US') 或 window.setPreviewLocale('zh-CN') 查看切换效果
+    // Run window.setPreviewLocale('en-US') or window.setPreviewLocale('zh-CN') in the console to see the switch
     (window as any).setPreviewLocale = (locale:string) => setPreviewLocale(getScenarioName(), locale);
   }
 

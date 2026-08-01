@@ -1,1 +1,1 @@
-# 移动端大包组件模板
+# Mobile component library template

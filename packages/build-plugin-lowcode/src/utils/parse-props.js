@@ -13,7 +13,7 @@ function propConfigToFieldConfig(propConfig) {
   return {
     title,
     ...propConfig,
-    // TODO 这边直接用propConfig，将setter丢在propconfig里，需要确认是否在PropConfig扩展还是换实现
+    // TODO: this spreads propConfig directly and puts the setter inside it; decide whether to extend PropConfig or change the implementation
     setter,
   };
 }
@@ -163,14 +163,14 @@ const EVENT_RE = /^on|after|before[A-Z][\w]*$/;
 
 module.exports = function (metadata) {
   const { configure = {} } = metadata;
-  // TODO types后续补充
+  // TODO: fill in the types later
   let extendsProps = null;
   if (configure.props) {
     if (Array.isArray(configure.props)) {
       return metadata;
     }
     const { isExtends, override = [] } = configure.props;
-    // 不开启继承时，直接返回configure配置
+    // Without inheritance, return the configure settings as-is
     if (!isExtends) {
       return {
         ...metadata,
@@ -182,7 +182,7 @@ module.exports = function (metadata) {
     }
 
     extendsProps = {};
-    // 开启继承后，缓存重写内容的配置
+    // With inheritance enabled, cache the overriding configuration
     override.forEach((prop) => {
       extendsProps[prop.name] = prop;
     });
@@ -239,7 +239,7 @@ module.exports = function (metadata) {
       return;
     }
 
-    // 存在覆盖配置时
+    // When an override configuration exists
     if (extendsProps) {
       if (name in extendsProps) {
         prop = extendsProps[name];

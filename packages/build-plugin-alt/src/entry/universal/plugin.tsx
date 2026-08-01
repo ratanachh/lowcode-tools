@@ -17,13 +17,13 @@ import assets from '../../public/assets.json';
 export default async ({ type, demoPlugin = undefined }) => {
 
   const registerPlugin = async (plugin) => {
-    // 避免要调试的插件被二次注册
+    // Avoid registering the plugin under debug a second time
     if (demoPlugin?.pluginName && plugin.pluginName === demoPlugin?.pluginName) {
       return;
     }
     await plugins.register(plugin);
   }
-  // plugin API 见 https://lowcode-engine.cn/site/docs/api/plugins
+  // Plugin API reference: https://lowcode-engine.cn/site/docs/api/plugins
   await registerPlugin(SchemaPlugin);
   await registerPlugin(CodeEditor);
 
@@ -36,7 +36,7 @@ export default async ({ type, demoPlugin = undefined }) => {
         if (type === 'setter') {
           const COMP_NAME = "BuiltInComp";
           const COMP_VERSION = '1.0.0';
-          const COMP_TITLE = '内置调试组件';
+          const COMP_TITLE = 'Built-in Debug Component';
           const COMP_PACKAGE = 'setter-plugin-builtin-component';
 
           (assets as any).packages.push({
@@ -51,8 +51,8 @@ export default async ({ type, demoPlugin = undefined }) => {
 
           (assets as any).components.unshift({
             componentName: COMP_NAME,
-            category: '调试用',
-            group: '调试用',
+            category: 'Debug',
+            group: 'Debug',
             title: COMP_TITLE,
             icon: "https://img.alicdn.com/imgextra/i1/O1CN01m4IZ481VKPwFFbDhP_!!6000000002634-2-tps-112-112.png",
             docUrl: "",
@@ -64,13 +64,13 @@ export default async ({ type, demoPlugin = undefined }) => {
             props: [
               {
                 name: "custom",
-                title: "内容",
+                title: "Content",
                 propType: "string"
               }
             ],
             snippets: [
               {
-                title: "调试用内置组件",
+                title: "Built-in Debug Component",
                 screenshot: "https://img.alicdn.com/imgextra/i1/O1CN01m4IZ481VKPwFFbDhP_!!6000000002634-2-tps-112-112.png",
                 schema: {
                   componentName: COMP_NAME,
@@ -94,13 +94,13 @@ export default async ({ type, demoPlugin = undefined }) => {
           });
         }
 
-        // 设置物料描述
+        // Set the material assets description
         const { material, project } = ctx;
         material.setAssets(assets as any);
 
         const schema = await getPageSchema(type);
 
-        // 加载 schema
+        // Load the schema
         project.openDocument(schema);
       },
     };
@@ -113,7 +113,7 @@ export default async ({ type, demoPlugin = undefined }) => {
     return {
       name: 'builtin-plugin-registry',
       async init() {
-        // 注册 logo 面板
+        // Register the logo widget
         skeleton.add({
           area: 'topArea',
           type: 'Widget',
@@ -130,7 +130,7 @@ export default async ({ type, demoPlugin = undefined }) => {
           },
         });
 
-        // 注册组件面板
+        // Register the components pane
         skeleton.add({
           area: 'leftArea',
           type: 'PanelDock',
@@ -140,7 +140,7 @@ export default async ({ type, demoPlugin = undefined }) => {
           props: {
             align: 'top',
             icon: 'zujianku',
-            description: '组件库',
+            description: 'Component Library',
           },
         });
       },
@@ -150,12 +150,12 @@ export default async ({ type, demoPlugin = undefined }) => {
 
   await registerPlugin(builtinPluginRegistry);
 
-  // 注册回退/前进
+  // Register undo/redo
   await registerPlugin(UndoRedo);
-  // 注册中英文切换
+  // Register the Chinese/English locale switcher
   await registerPlugin(ZhEn);
 
-    // 注册保存面板
+    // Register the save widget
     const saveSample = (ctx: IPublicModelPluginContext) => {
       return {
         name: 'saveSample',
@@ -170,7 +170,7 @@ export default async ({ type, demoPlugin = undefined }) => {
             content: <button
               className='save-sample'
               onClick={saveSchema}
-            >保存到本地</button>
+            >Save to Local</button>
           });
           ctx.skeleton.add({
             name: 'resetSchema',
@@ -182,7 +182,7 @@ export default async ({ type, demoPlugin = undefined }) => {
             content: <button
               className='save-sample'
               onClick={resetSchema}
-            >重置页面</button>
+            >Reset Page</button>
           });
           ctx.hotkey.bind('command+s', (e) => {
             e.preventDefault();

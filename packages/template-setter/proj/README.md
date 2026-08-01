@@ -4,7 +4,7 @@
 
 ---
 
-## 标准组件描述协议中使用
+## Using it in the standard component metadata protocol
 
 ```js
  configure: {
@@ -12,7 +12,7 @@
      {
         type: 'field',
         name: 'someprop',
-        title: '某属性',
+        title: 'Some property',
         setter: '<%- componentName %>'
      }
    ]

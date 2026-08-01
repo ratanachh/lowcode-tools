@@ -68,7 +68,7 @@ export default class InitFunc {
     };
     fs.ensureDirSync(this.copyPath);
     if (!this.isDirEmpty(this.copyPath)) {
-      console.log(chalk.red('需要初始化的项目目录不为空，请清空后重试'));
+      console.log(chalk.red('The target project directory is not empty. Please empty it and try again.'));
       return;
     }
     glob.sync('**', {
@@ -94,7 +94,7 @@ export default class InitFunc {
   }
 
   init() {
-    console.log(chalk.green('正在为你初始化项目，请稍等...'));
+    console.log(chalk.green('Initializing your project, please wait...'));
     this.ensureInstallPath();
     this.initInstallPathPackageJson();
     this.installTpl();

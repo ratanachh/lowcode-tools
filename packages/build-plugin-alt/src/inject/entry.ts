@@ -1,5 +1,5 @@
 //@ts-nocheck 
-//插件调试入口文件
+// Plugin debugging entry file
 function getDefault(module) {
   if (module.__esModule) {
     return module.default

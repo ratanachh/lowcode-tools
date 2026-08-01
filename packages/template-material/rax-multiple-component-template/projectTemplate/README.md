@@ -1,15 +1,15 @@
 # <%= projectName %>
 
-一个面向移动端的跨端多包组件库
+A cross-platform, mobile-oriented multi-package component library
 
-## 调试
-启动调试
+## Development
+Start the dev environment
 
 ```bash
 npm start <componentName> [demoName]
 ```
 
-构建
+Build
 
 ```bash
 npm run build

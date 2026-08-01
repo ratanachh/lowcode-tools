@@ -5,7 +5,7 @@ import './index.scss';
 
 export interface ColorfulButtonProps {
   /**
-   * 类型
+   * Button type
    */
   type?: "primary" | "secondary" | "normal";
   color?: string;

@@ -13,22 +13,22 @@ const getQuestions = ({ argv }) => {
     {
       type: 'list',
       name: 'componentType',
-      message: '请选择引擎生态元素类型',
+      message: 'Select the type of engine ecosystem element',
       choices: [
         {
-          name: '组件/物料',
+          name: 'Component / Material',
           value: 'component',
         },
         {
-          name: '设置器 (setter)',
+          name: 'Setter',
           value: 'setter',
         },
         {
-          name: '插件 (plugin)',
+          name: 'Plugin',
           value: 'plugin',
         },
         {
-          name: '编辑器 (editor)',
+          name: 'Editor',
           value: 'editor',
         },
       ]
@@ -36,7 +36,7 @@ const getQuestions = ({ argv }) => {
     {
       type: 'input',
       name: 'projectName',
-      message: '生态元素包名',
+      message: 'Package name of the ecosystem element',
       default(ans) {
         const pathBaseName = path.basename(path.join(process.cwd(), argv._[0] || './'));
         return pathBaseName;
@@ -45,7 +45,7 @@ const getQuestions = ({ argv }) => {
     {
       type: 'input',
       name: 'description',
-      message: '简要介绍生态元素',
+      message: 'Short description of the ecosystem element',
       default(ans) {
         return ans.projectName;
       },
@@ -53,7 +53,7 @@ const getQuestions = ({ argv }) => {
     {
       type: 'input',
       name: 'author',
-      message: '作者名',
+      message: 'Author name',
       default() {
         return process.env.USER || process.env.USERNAME;
       },

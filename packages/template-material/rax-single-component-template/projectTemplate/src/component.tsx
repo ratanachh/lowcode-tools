@@ -5,17 +5,17 @@ import './style.scss';
 
 export interface ComponentProps {
   /**
-   * 名称
+   * Name
    */
   name: string;
   /**
-   * 子节点
+   * Child nodes
    */
   children: any;
 }
 
 /**
- * 示例组件
+ * Example component
  * @param props
  * @constructor
  */
@@ -31,7 +31,7 @@ function ExampleComponent(props: ComponentProps, ref: any) {
 const RefComponent = forwardRef(ExampleComponent as ForwardRefRenderFunction<any, ComponentProps>);
 
 RefComponent.defaultProps = {
-  name: '标题',
+  name: 'Title',
 };
 RefComponent.displayName = 'ExampleComponent';
 

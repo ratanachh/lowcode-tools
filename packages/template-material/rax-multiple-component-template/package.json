@@ -1,7 +1,7 @@
 {
   "name": "@rchh/rax-multiple-component-template",
   "version": "0.1.1",
-  "description": "rax 组件库模板",
+  "description": "Rax component library template",
   "main": "lib/index.js",
   "files": [
     "projectTemplate/",

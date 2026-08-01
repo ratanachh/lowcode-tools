@@ -92,7 +92,7 @@ module.exports = function babelCompiler(context,
   }) {
   const { rootDir, pkg } = context;
 
-  // FIXME: 没有 compilerOptions 这个参数
+  // FIXME: there is no such option as compilerOptions
   const {
     compilerOptions = {},
     babelOptions = [],

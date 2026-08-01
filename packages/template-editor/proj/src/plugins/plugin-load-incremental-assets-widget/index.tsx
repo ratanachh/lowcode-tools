@@ -5,7 +5,7 @@ import { Message } from '@alifd/next';
 
 const loadIncrementalAssets = () => {
   material?.onChangeAssets(() => {
-    Message.success('[MCBreadcrumb] 物料加载成功');
+    Message.success('[MCBreadcrumb] Materials loaded successfully');
   });
 
   material.loadIncrementalAssets({
@@ -39,13 +39,13 @@ const loadIncrementalAssets = () => {
           {
             name: 'prefix',
             propType: 'string',
-            description: '样式类名的品牌前缀',
+            description: 'Brand prefix for the style class names',
             defaultValue: 'next-',
           },
           {
             name: 'title',
             propType: 'string',
-            description: '标题',
+            description: 'Title',
             defaultValue: 'next-',
           },
           {
@@ -58,7 +58,7 @@ const loadIncrementalAssets = () => {
               type: 'instanceOf',
               value: 'node',
             },
-            description: '面包屑子节点，需传入 Breadcrumb.Item',
+            description: 'Breadcrumb children; must be Breadcrumb.Item elements',
           },
           {
             name: 'maxNode',
@@ -73,7 +73,7 @@ const loadIncrementalAssets = () => {
               ],
             },
             description:
-              '面包屑最多显示个数，超出部分会被隐藏, 设置为 auto 会自动根据父元素的宽度适配。',
+              'Maximum number of breadcrumb items to display; extra items are hidden. Set to auto to fit the parent width automatically.',
             defaultValue: 100,
           },
           {
@@ -82,7 +82,7 @@ const loadIncrementalAssets = () => {
               type: 'instanceOf',
               value: 'node',
             },
-            description: '分隔符，可以是文本或 Icon',
+            description: 'Separator; can be text or an Icon',
           },
           {
             name: 'component',
@@ -90,7 +90,7 @@ const loadIncrementalAssets = () => {
               type: 'oneOfType',
               value: ['string', 'func'],
             },
-            description: '设置标签类型',
+            description: 'HTML tag to render',
             defaultValue: 'nav',
           },
           {
@@ -114,24 +114,24 @@ const loadIncrementalAssets = () => {
 
     componentList: [
       {
-        title: '常用',
+        title: 'Common',
         icon: '',
         children: [
           {
             componentName: 'MCBreadcrumb',
-            title: 'MC面包屑',
+            title: 'MC Breadcrumb',
             icon: '',
             package: 'mc-breadcrumb',
             library: 'MCBreadcrumb',
             snippets: [
               {
-                title: 'MC面包屑',
+                title: 'MC Breadcrumb',
                 screenshot:
                   'https://alifd.oss-cn-hangzhou.aliyuncs.com/fusion-cool/icons/icon-light/ic_light_breadcrumb.png',
                 schema: {
                   componentName: 'MCBreadcrumb',
                   props: {
-                    title: '物料中心',
+                    title: 'Material Center',
                     prefix: 'next-',
                     maxNode: 100,
                   },
@@ -159,7 +159,7 @@ const LoadIncrementalAssetsWidgetPlugin = (ctx: IPublicModelPluginContext) => {
         },
         content: (
           <Button onClick={loadIncrementalAssets}>
-            异步加载资源
+            Load Assets Async
           </Button>
         ),
       });

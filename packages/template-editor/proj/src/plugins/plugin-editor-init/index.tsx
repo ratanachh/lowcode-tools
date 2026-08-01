@@ -9,17 +9,17 @@ const EditorInitPlugin = (ctx: IPublicModelPluginContext, options: any) => {
       const scenarioName = options['scenarioName'];
       const scenarioDisplayName = options['displayName'] || scenarioName;
       const scenarioInfo = options['info'] || {};
-      // 保存在 config 中用于引擎范围其他插件使用
+      // Store in config so other engine-wide plugins can read it
       config.set('scenarioName', scenarioName);
       config.set('scenarioDisplayName', scenarioDisplayName);
       config.set('scenarioInfo', scenarioInfo);
 
-      // 设置物料描述
+      // Set the material assets description
 
       await material.setAssets(await injectAssets(assets));
 
       const schema = await getProjectSchema(scenarioName);
-      // 加载 schema
+      // Load the schema
       project.importSchema(schema as any);
     },
   };
@@ -27,22 +27,22 @@ const EditorInitPlugin = (ctx: IPublicModelPluginContext, options: any) => {
 EditorInitPlugin.pluginName = 'EditorInitPlugin';
 EditorInitPlugin.meta = {
   preferenceDeclaration: {
-    title: '保存插件配置',
+    title: 'Save plugin configuration',
     properties: [
       {
         key: 'scenarioName',
         type: 'string',
-        description: '用于localstorage存储key',
+        description: 'Key used for localStorage persistence',
       },
       {
         key: 'displayName',
         type: 'string',
-        description: '用于显示的场景名',
+        description: 'Scenario name shown in the UI',
       },
       {
         key: 'info',
         type: 'object',
-        description: '用于扩展信息',
+        description: 'Additional metadata',
       }
     ],
   },

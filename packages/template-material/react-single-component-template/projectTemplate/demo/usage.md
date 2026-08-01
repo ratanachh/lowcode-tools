@@ -3,7 +3,7 @@ title: Simple Usage
 order: 1
 ---
 
-本 Demo 演示一行文字的用法。
+This demo shows the simplest single-line usage.
 
 ```jsx
 import React, { Component } from 'react';

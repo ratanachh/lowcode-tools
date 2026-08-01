@@ -47,14 +47,14 @@ const Inject = (ctx: IPublicModelPluginContext, options: IOptions = {}) => {
     setInjectServerHost(options.injectServerHost);
   }
 
-  // inject 已有的设计器插件
-  // 覆盖后续的插件注册逻辑，所有只有本插件后面注册的插件才可以支持 inject 逻辑
+  // Inject the existing designer plugins.
+  // This overrides the plugin registration logic, so only plugins registered after this one support injection.
   const originalRegister = plugins.register;
   plugins.register = async function (plugin: IPublicTypePlugin, pluginOptions: any, options: any) {
     let pluginName = plugin.pluginName;
     if (!pluginName) {
       const pluginConfig = plugin(ctx, pluginOptions);
-      // 兼容逻辑
+      // Backward compatibility
       pluginName = (pluginConfig as any).name;
     }
     const injectedSameNamePlugin = await getInjectedPlugin(pluginName, ctx, injectOptions);
@@ -67,20 +67,20 @@ const Inject = (ctx: IPublicModelPluginContext, options: IOptions = {}) => {
   }
 
   return {
-    // 插件名，注册环境下唯一
+    // Plugin name, unique within the registration environment
     name: 'LowcodePluginInjectAlt',
-    // 依赖的插件（插件名数组）
+    // Names of the plugins this one depends on
     dep: [],
-    // 插件的初始化函数，在引擎初始化之后会立刻调用
+    // Plugin initializer, called right after the engine is initialized
     async init() {
 
-      // inject 新的设计器插件
+      // Inject the newly added designer plugins
       if (injectedPluginConfigMap) {
-        // TODO 改为引擎的 onInit 事件
+        // TODO: switch to the engine's onInit event
         setTimeout(async () => {
           for (const key in injectedPluginConfigMap) {
             if (injectedPluginConfigMap[key]) {
-              // 这里是兼容新旧两种 API，新版只有 creator 和 options 两个入参，但老版有三个
+              // Supports both the old and new APIs: the new one takes only creator and options, the old one takes three arguments
               await plugins.register(injectedPluginConfigMap[key], { autoInit: true }, { autoInit: true });
             }
           }
@@ -92,14 +92,14 @@ const Inject = (ctx: IPublicModelPluginContext, options: IOptions = {}) => {
       });
       if (injectedPlugins.length > 0 || injectedSetters.length > 0) {
         Notification.success({
-          title: '成功注入以下插件',
+          title: 'Successfully injected the following plugins',
           content: (
             <div>
               {injectedPlugins && injectedPlugins.map((item: any) => (
-                <p>设计器插件：<b>{item.name}</b></p>
+                <p>Designer plugin: <b>{item.name}</b></p>
               ))}
               {injectedSetters && injectedSetters.map((item: any) => (
-                <p>setter：<b>{item.name}</b></p>
+                <p>Setter: <b>{item.name}</b></p>
               ))}
             </div>
           )
@@ -115,12 +115,12 @@ export default Inject;
 Inject.meta = {
   dependencies: [],
   preferenceDeclaration: {
-    title: '注入资源的主机地址',
+    title: 'Host address serving the injected resources',
     properties: [
       {
         key: 'injectServerHost',
         type: 'string',
-        description: '注入资源的主机地址',
+        description: 'Host address serving the injected resources',
       },
     ],
   },

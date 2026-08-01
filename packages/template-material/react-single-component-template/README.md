@@ -1,3 +1,3 @@
-## 简介
+## Introduction
 
-这是一个 pc 端-单组件模板，projectTemplate 目录下是具体的模板内容。
+A desktop single-component template. The actual template content lives in the `projectTemplate` directory.

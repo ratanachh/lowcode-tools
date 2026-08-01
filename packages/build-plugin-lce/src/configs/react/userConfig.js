@@ -24,7 +24,7 @@ htmlInjection.configHTMLContent({
   headAppend: [
     {
       tag: 'title',
-      innerHTML: 'DEMO 预览',
+      innerHTML: 'Demo Preview',
     },
   ],
   rootContainer: '<div id="root"></div>',

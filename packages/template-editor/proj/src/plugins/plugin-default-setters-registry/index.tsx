@@ -1,16 +1,15 @@
 import { IPublicModelPluginContext } from '@rchh/lowcode-types';
 import AliLowCodeEngineExt from '@rchh/lowcode-engine-ext';
 
-// 设置内置 setter 和事件绑定、插件绑定面板
+// Set up the built-in setters and the event/variable binding dialogs
 const DefaultSettersRegistryPlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
       const { setterMap, pluginMap } = AliLowCodeEngineExt;
       const { setters, skeleton } = ctx;
-      // 注册 setterMap
+      // Register the setter map
       setters.registerSetter(setterMap);
-      // 注册插件
-      // 注册事件绑定面板
+      // Register the event binding dialog
       skeleton.add({
         area: 'centerArea',
         type: 'Widget',
@@ -19,7 +18,7 @@ const DefaultSettersRegistryPlugin = (ctx: IPublicModelPluginContext) => {
         props: {},
       });
 
-      // 注册变量绑定面板
+      // Register the variable binding dialog
       skeleton.add({
         area: 'centerArea',
         type: 'Widget',

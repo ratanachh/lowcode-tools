@@ -20,7 +20,7 @@ export const saveSchema = () => {
     'packages',
     JSON.stringify(packages)
   );
-  Message.success('成功保存到本地');
+  Message.success('Saved to local storage');
 };
 
 export const resetSchema = async () => {
@@ -42,7 +42,7 @@ export const resetSchema = async () => {
     fileName: 'sample',
   });
   project.simulator.rerender();
-  Message.success('成功重置页面');
+  Message.success('Page reset');
 }
 
 export const getPackages = () => {

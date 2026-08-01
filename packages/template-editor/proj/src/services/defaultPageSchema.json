@@ -70,7 +70,7 @@
     },
     "getHelloWorldText2": {
       "type": "JSFunction",
-      "value": "function getHelloWorldText2() {\n  return this.i18n('i18n-jwg27yo3', {\n  name: '絮黎'\n  });\n}"
+      "value": "function getHelloWorldText2() {\n  return this.i18n('i18n-jwg27yo3', {\n  name: 'Ada'\n  });\n}"
     },
     "onTestConstantsButtonClicked": {
       "type": "JSFunction",
@@ -81,7 +81,7 @@
       "value": "function onTestUtilsButtonClicked() {\n  this.utils.demoUtil('param1', 'param2');\n}"
     }
   },
-  "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    });\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    });\n  }\n  getHelloWorldText() {\n    return this.i18n('i18n-jwg27yo4');\n  }\n  getHelloWorldText2() {\n    return this.i18n('i18n-jwg27yo3', {\n      name: '絮黎',\n    });\n  }\n  onTestConstantsButtonClicked() {\n    console.log('constants.ConstantA:', this.constants.ConstantA);\n    console.log('constants.ConstantB:', this.constants.ConstantB);\n\t}\n\tonTestUtilsButtonClicked(){\n    this.utils.demoUtil('param1', 'param2');\n\t}\n}",
+  "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    });\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    });\n  }\n  getHelloWorldText() {\n    return this.i18n('i18n-jwg27yo4');\n  }\n  getHelloWorldText2() {\n    return this.i18n('i18n-jwg27yo3', {\n      name: 'Ada',\n    });\n  }\n  onTestConstantsButtonClicked() {\n    console.log('constants.ConstantA:', this.constants.ConstantA);\n    console.log('constants.ConstantB:', this.constants.ConstantB);\n\t}\n\tonTestUtilsButtonClicked(){\n    this.utils.demoUtil('param1', 'param2');\n\t}\n}",
   "hidden": false,
   "title": "",
   "isLocked": false,
@@ -99,7 +99,7 @@
         },
         "ref": "fdpage-bb43fbb0"
       },
-      "title": "页面",
+      "title": "Page",
       "hidden": false,
       "isLocked": false,
       "condition": true,
@@ -114,7 +114,7 @@
               "minHeight": ""
             }
           },
-          "title": "区域",
+          "title": "Section",
           "hidden": false,
           "isLocked": false,
           "condition": true,
@@ -127,7 +127,7 @@
                 "mode": "transparent",
                 "span": 12
               },
-              "title": "区块",
+              "title": "Block",
               "hidden": false,
               "isLocked": false,
               "condition": true,
@@ -144,7 +144,7 @@
                     },
                     "width": ""
                   },
-                  "title": "容器",
+                  "title": "Container",
                   "hidden": false,
                   "isLocked": false,
                   "condition": true,
@@ -154,7 +154,7 @@
                       "componentName": "FDP",
                       "id": "node_oclfjpfqjy10",
                       "props": {},
-                      "title": "段落",
+                      "title": "Paragraph",
                       "hidden": false,
                       "isLocked": false,
                       "condition": true,
@@ -200,7 +200,7 @@
                   "minHeight": ""
                 }
               },
-              "title": "区块",
+              "title": "Block",
               "hidden": false,
               "isLocked": false,
               "condition": true,
@@ -214,7 +214,7 @@
                       "backgroundColor": "rgba(255,255,255,1)"
                     }
                   },
-                  "title": "行容器",
+                  "title": "Row Container",
                   "hidden": false,
                   "isLocked": false,
                   "condition": true,
@@ -231,7 +231,7 @@
                         },
                         "width": ""
                       },
-                      "title": "容器",
+                      "title": "Container",
                       "hidden": false,
                       "isLocked": false,
                       "condition": true,
@@ -241,7 +241,7 @@
                           "componentName": "FDP",
                           "id": "node_oclfjqcdwn14",
                           "props": {},
-                          "title": "段落",
+                          "title": "Paragraph",
                           "hidden": false,
                           "isLocked": false,
                           "condition": true,
@@ -252,7 +252,7 @@
                               "id": "node_oclfjqcdwn13",
                               "props": {
                                 "type": "h5",
-                                "children": "多语言展示",
+                                "children": "Internationalization Demo",
                                 "mark": false,
                                 "code": false,
                                 "delete": false,
@@ -276,7 +276,7 @@
                           "componentName": "FDP",
                           "id": "node_oclfjqcdwn2k",
                           "props": {},
-                          "title": "段落",
+                          "title": "Paragraph",
                           "hidden": false,
                           "isLocked": false,
                           "condition": true,
@@ -314,7 +314,7 @@
                                 "children": {
                                   "type": "JSExpression",
                                   "value": "this.getHelloWorldText2()",
-                                  "mock": "基于 Ali-Lowcode-Engine 快速打造高生产力的低代码研发平台, 基于自然布局体系快速搭建页面"
+                                  "mock": "Build a highly productive lowcode development platform on Ali-Lowcode-Engine, and assemble pages quickly with the natural layout system"
                                 },
                                 "mark": false,
                                 "code": false,
@@ -344,7 +344,7 @@
                           "backgroundColor": "rgba(255,255,255,1)"
                         }
                       },
-                      "title": "容器",
+                      "title": "Container",
                       "hidden": false,
                       "isLocked": false,
                       "condition": true,
@@ -354,7 +354,7 @@
                           "componentName": "FDP",
                           "id": "node_oclfjqcf7z2h",
                           "props": {},
-                          "title": "段落",
+                          "title": "Paragraph",
                           "hidden": false,
                           "isLocked": false,
                           "condition": true,
@@ -365,7 +365,7 @@
                               "id": "node_oclfjqcf7z2g",
                               "props": {
                                 "type": "h5",
-                                "children": "交互展示",
+                                "children": "Interaction Demo",
                                 "mark": false,
                                 "code": false,
                                 "delete": false,
@@ -389,7 +389,7 @@
                           "componentName": "FDP",
                           "id": "node_oclfjqcf7z2l",
                           "props": {},
-                          "title": "段落",
+                          "title": "Paragraph",
                           "hidden": false,
                           "isLocked": false,
                           "condition": true,
@@ -422,7 +422,7 @@
                                   "eventList": [
                                     {
                                       "name": "onClick",
-                                      "description": "点击按钮的回调\n@param {Object} e Event Object",
+                                      "description": "Callback fired when the button is clicked\n@param {Object} e Event Object",
                                       "disabled": true
                                     },
                                     {
@@ -469,7 +469,7 @@
                                   "eventList": [
                                     {
                                       "name": "onClick",
-                                      "description": "点击按钮的回调\n@param {Object} e Event Object",
+                                      "description": "Callback fired when the button is clicked\n@param {Object} e Event Object",
                                       "disabled": true
                                     },
                                     {
@@ -509,7 +509,7 @@
                   "minHeight": ""
                 }
               },
-              "title": "区块",
+              "title": "Block",
               "hidden": false,
               "isLocked": false,
               "condition": true,
@@ -525,7 +525,7 @@
                       "backgroundColor": "rgba(255,255,255,1)"
                     }
                   },
-                  "title": "容器",
+                  "title": "Container",
                   "hidden": false,
                   "isLocked": false,
                   "condition": true,
@@ -535,7 +535,7 @@
                       "componentName": "FDP",
                       "id": "node_oclfjqcf7z43",
                       "props": {},
-                      "title": "段落",
+                      "title": "Paragraph",
                       "hidden": false,
                       "isLocked": false,
                       "condition": true,

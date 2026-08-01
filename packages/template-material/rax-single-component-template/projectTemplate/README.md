@@ -1,26 +1,26 @@
 ---
-title: 示例组件
-description: 组件描述
+title: Example Component
+description: Component description
 category: General
 ---
 
-一个面向移动端的跨端单组件包
+A cross-platform, mobile-oriented single-component package
 
-## 使用
+## Usage
 
 ```bash
 npm install <%= projectName %> --save
 ```
 
 
-## 调试
-启动调试
+## Development
+Start the dev environment
 
 ```bash
 npm start
 ```
 
-构建
+Build
 
 ```bash
 npm run build

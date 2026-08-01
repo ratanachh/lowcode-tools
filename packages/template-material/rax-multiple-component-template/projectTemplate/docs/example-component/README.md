@@ -1,9 +1,9 @@
 ---
-title: 示例组件
-description: 组件描述
+title: Example Component
+description: Component description
 category: General
 ---
 
-示例组件
+Example component
 
 <API/>

@@ -113,7 +113,7 @@ module.exports = ({
   });
 
   onHook('after.start.compile', async ({ urls, stats }) => {
-    // 自定义 log 内容
+    // Customize the log output
     setDevLog({ log, context, urls, stats });
   });
 

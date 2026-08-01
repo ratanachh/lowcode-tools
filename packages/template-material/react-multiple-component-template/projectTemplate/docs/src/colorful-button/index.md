@@ -1,8 +1,8 @@
-## 何时使用
+## When to use
 
-适合表单场景。
+Suitable for form scenarios.
 
-## 示例
+## Example
 
 ```tsx
 import React from 'react';

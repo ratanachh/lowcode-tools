@@ -11,7 +11,7 @@ export interface IAntdSetterProps {
 
 const InputSetter: React.FC<IAntdSetterProps> = ({
   onChange,
-  placeholder = '请输入',
+  placeholder = 'Please enter',
   value,
 }) => {
   return (

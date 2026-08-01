@@ -23,20 +23,20 @@ const ALILC_COMMON_EXTERNALS = {
   '@alifd/lowcode-preset-plugin': 'var window.LowcodePresetPlugin',
 };
 
-const DEFAULT_GROUPS = ['精选组件', '原子组件'];
+const DEFAULT_GROUPS = ['Featured Components', 'Atomic Components'];
 const DEFAULT_CATEGORIES = [
-  '基础元素',
-  '布局容器类',
-  '表格类',
-  '表单详情类',
-  '帮助类',
-  '对话框类',
-  '业务类',
-  '通用',
-  '引导',
-  '信息输入',
-  '信息展示',
-  '信息反馈',
+  'Basic Elements',
+  'Layout Containers',
+  'Tables',
+  'Forms and Details',
+  'Help',
+  'Dialogs',
+  'Business',
+  'General',
+  'Guidance',
+  'Data Entry',
+  'Data Display',
+  'Feedback',
 ];
 
 const STATIC_RESOURCES = {

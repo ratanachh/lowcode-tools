@@ -4,35 +4,35 @@
 
 ---
 
-## 使用
+## Usage
 
-### 注册插件
+### Register the plugin
 ```jsx
 import { plugins } from '@rchh/lowcode-engine';
 import <%- componentName %> from '<%- name %>';
 
-// 注册到引擎
+// Register with the engine
 plugins.register(<%- componentName %>);
 ```
 
-### 插件属性 & 方法
-无对外暴露的属性和方法
+### Plugin properties & methods
+No public properties or methods are exposed.
 
-### 依赖插件
-该插件依赖以下插件：
+### Plugin dependencies
+This plugin depends on the following plugins:
 
-| 插件名 | 包名 |
+| Plugin name | Package name |
 | --- | --- |
 
-## 开发
-### 环境准备
+## Development
+### Prerequisites
 
-### 启动
+### Start
 ```sh
 npm i & npm start
 ```
 
-### 发布
+### Publish
 ```sh
 npm run pub
 ```
