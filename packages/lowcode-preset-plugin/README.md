@@ -9,8 +9,8 @@
     library,
     engineScope: "@alilc",
     staticResources: {
-      enginePresetJsUrl: 'https://cdn.jsdelivr.net/npm/@rchh/lowcode-preset-plugin@0.1.1/dist/lowcode-preset-plugin.js',
-      enginePresetCssUrl: 'https://cdn.jsdelivr.net/npm/@rchh/lowcode-preset-plugin@0.1.1/dist/lowcode-preset-plugin.css'
+      enginePresetJsUrl: 'https://cdn.jsdelivr.net/npm/@rchh/lowcode-preset-plugin@0.1.2/dist/lowcode-preset-plugin.js',
+      enginePresetCssUrl: 'https://cdn.jsdelivr.net/npm/@rchh/lowcode-preset-plugin@0.1.2/dist/lowcode-preset-plugin.css'
     },
     externals: {
       '@alifd/lowcode-preset-plugin': 'window.LowcodePresetPlugin'

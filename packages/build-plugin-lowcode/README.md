@@ -28,8 +28,8 @@ export type Assets = {
 //   package: 'antd',
 //   version: '4.17.3',
 //   urls: [
-//     'https://g.alicdn.com/code/lib/antd/4.17.3/antd.min.js',
-//     'https://g.alicdn.com/code/lib/antd/4.17.3/antd.min.css',
+//     'https://cdn.jsdelivr.net/npm/antd@4.17.3/dist/antd.min.js',
+//     'https://cdn.jsdelivr.net/npm/antd@4.17.3/dist/antd.min.css',
 //   ],
 //   library: 'antd',
 // }
