@@ -1,6 +1,6 @@
 {
   "name": "@rchh/react-single-component-template",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "React single-component template",
   "files": [
     "projectTemplate/"
@@ -33,5 +33,12 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ratanachh/lowcode-tools.git",
+    "directory": "packages/template-material/react-single-component-template"
+  },
+  "homepage": "https://ratanachh.github.io/lowcode-engine/",
+  "bugs": "https://github.com/ratanachh/lowcode-tools/issues"
 }

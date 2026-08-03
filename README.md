@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://lowcode-engine.cn">
+  <a href="https://ratanachh.github.io/lowcode-engine/">
     <img width="200" src="./docs/logo.svg">
   </a>
 </p>
@@ -14,4 +14,4 @@ LowCode Engine toolchain (scaffolding / build plugins / debugging plugins)
 
 ## Documentation
 
-https://lowcode-engine.cn/site/docs/guide/expand/editor/cli
+https://ratanachh.github.io/lowcode-engine/docs/guide/expand/editor/cli

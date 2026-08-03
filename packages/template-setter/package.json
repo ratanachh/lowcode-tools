@@ -1,6 +1,6 @@
 {
   "name": "@rchh/lowcode-template-setter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ali lowCode engine setter template",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alibaba/lowcode-tools.git",
+    "url": "https://github.com/ratanachh/lowcode-tools.git",
     "directory": "packages/template-setter"
   },
   "publishConfig": {
@@ -17,5 +17,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "author": "eternalsky",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://ratanachh.github.io/lowcode-engine/",
+  "bugs": "https://github.com/ratanachh/lowcode-tools/issues"
 }

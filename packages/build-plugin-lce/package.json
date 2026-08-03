@@ -1,6 +1,6 @@
 {
   "name": "@rchh/build-plugin-lce",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "build plugin for LowCodeEngine",
   "main": "src/index.js",
   "scripts": {
@@ -76,9 +76,11 @@
   "devDependencies": {
     "@types/node": "^12.12.18"
   },
-  "repository": "https://github.com/alibaba/lowcode-tools.git",
+  "repository": "https://github.com/ratanachh/lowcode-tools.git",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "homepage": "https://ratanachh.github.io/lowcode-engine/",
+  "bugs": "https://github.com/ratanachh/lowcode-tools/issues"
 }
