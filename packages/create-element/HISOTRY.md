@@ -1,14 +1,14 @@
 ## 1.2.0
 
-- `feat` rax 已经进入停止维护周期，去除 rax 组件生成入口
+- `feat` remove Rax component generation entry (Rax unmaintained)
 
 ## 1.1.3
 
-- `fix` 无法获取最新模板
+- `fix` fail to fetch latest template
 
 ## 1.1.2
 
-- `fix` 额外处理 _npmignore
+- `fix` handle `_npmignore` specially
 
 ## 1.1.1
 
